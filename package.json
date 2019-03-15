@@ -2,6 +2,11 @@
   "name": "2019Q1-react-mentoring-program",
   "version": "1.0.0",
   "description": "react app",
+  "scripts": {
+    "dev": "webpack-dev-server --colors --progress",
+    "build": "cross-env NODE_ENV=production && webpack",
+    "test": "jest"
+  },
   "devDependencies": {
     "nodemon": "^1.18.9",
     "path": "^0.12.7"

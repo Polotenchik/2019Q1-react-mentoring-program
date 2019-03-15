@@ -33,7 +33,7 @@ const config = {
                 use: 'html-loader',
             },
             {
-                test: /\.js$/,
+                test: /\.(js|jsx)?$/,
                 exclude: /node_modules/,
                 use: [{ loader: 'babel-loader' }],
             },
@@ -103,7 +103,7 @@ const config = {
 
     devServer: {
         contentBase: distPath,
-        port: 5000,
+        port: 8050,
         compress: true,
         open: true,
         hot: true,

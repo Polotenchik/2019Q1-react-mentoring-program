@@ -6,21 +6,11 @@ import ClassPureComponent from './components/react-pure-component';
 import { FunctionalComponent } from './components/react-functional-component';
 
 ReactDOM.render(
-    <CreateElementComponent />,
-    document.getElementById('greeting-create-component')
-);
-
-ReactDOM.render(
-    <ClassElementComponent />, 
-    document.getElementById('greeting-class-component')
-);
-
-ReactDOM.render(
-    <ClassPureComponent />, 
-    document.getElementById('greeting-pure-component')
-);
-
-ReactDOM.render(
-    <FunctionalComponent />,
-    document.getElementById('greeting-functional-component')
+    <>
+        <CreateElementComponent />
+        <ClassElementComponent />
+        <ClassPureComponent />
+        <FunctionalComponent />
+    </>,
+    document.getElementById('greeting')
 );

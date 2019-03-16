@@ -85,15 +85,16 @@ const config = {
             template: path.resolve(__dirname, './src/index.html'),
         }),
         new webpack.HotModuleReplacementPlugin(),
+        new UglifyJsPlugin(),
     ],
 
     optimization: isProduction ? {
         minimizer: [
             new UglifyJsPlugin({
-                sourceMap: false,
+                sourceMap: true,
                 uglifyOptions: {
                 compress: {
-                    inline: false,
+                    inline: true,
                     drop_console: true,
                 },
                 },
@@ -103,7 +104,7 @@ const config = {
 
     devServer: {
         contentBase: distPath,
-        port: 8050,
+        port: 5000,
         compress: true,
         open: true,
         hot: true,

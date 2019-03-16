@@ -9,7 +9,7 @@ const DEVELOPMENT = 'development';
 
 const env = process.env.NODE_ENV;
 const isProduction = env && env.trim() === PRODUCTION;
-const isDevelopment = !isProduction;
+const isDevelopment = env && env.trim() === DEVELOPMENT;
 const distPath = path.join(__dirname, '/public');
 
 const config = {
@@ -85,7 +85,6 @@ const config = {
             template: path.resolve(__dirname, './src/index.html'),
         }),
         new webpack.HotModuleReplacementPlugin(),
-        new UglifyJsPlugin(),
     ],
 
     optimization: isProduction ? {

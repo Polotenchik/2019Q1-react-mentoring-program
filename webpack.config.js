@@ -91,7 +91,7 @@ const config = {
     optimization: isProduction ? {
         minimizer: [
             new UglifyJsPlugin({
-                sourceMap: true,
+                sourceMap: false,
                 uglifyOptions: {
                 compress: {
                     inline: true,

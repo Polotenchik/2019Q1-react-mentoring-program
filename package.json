@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "react app",
   "scripts": {
-    "dev": "webpack-dev-server --colors --progress",
-    "build": "cross-env NODE_ENV=production && webpack",
+    "dev": "set NODE_ENV=development && webpack-dev-server --colors --progress",
+    "build": "set NODE_ENV=production && webpack",
     "test": "jest"
   },
   "devDependencies": {

@@ -3,6 +3,7 @@
 > **npm install**
 
 > **npm run dev** - start ***development*** mode
+
 > **npm run  build** -  create ***production*** build
 
 > **node app.js** - luanch server on  http://localhost:3000/

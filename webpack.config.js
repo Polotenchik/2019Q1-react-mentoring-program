@@ -24,7 +24,7 @@ const config = {
         path: distPath,
     },
 
-    devtool: isDevelopment ? 'source-map' : 'none',
+    devtool: isDevelopment ? 'eval-source-map' : 'none',
 
     module: {
         rules: [

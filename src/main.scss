@@ -31,5 +31,9 @@ $color_black: #000; // black
 @import './components/TopBarSection.scss';
 @import './containers/Search.scss';
 @import './common/Input.scss';
+@import './containers/MovieItem.scss';
+@import './containers/MovieItemPoster.scss';
+@import './containers/MovieItemInfo.scss';
 @import './containers/Content.scss';
 @import './components/Footer.scss';
+@import './components/NoResultsBlock.scss';

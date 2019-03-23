@@ -1,0 +1,10 @@
+.header {
+    min-height: 350px;
+    width: inherit;
+}
+  
+  .header-container {
+    width: $headerContainerWidth;
+    margin: 0 auto;
+    padding: 20px 0;
+  }

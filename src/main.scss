@@ -1,6 +1,32 @@
+$appWidth: 1150px;
+$fontFamily: Arial, "Helvetica Neue", Helvetica, sans-serif;
+$fontSizeDefault: 14px;
+
+
+$elementHeight: 30px; //buttons, labels
+$elementPadding: 20px;
+$elementFontSize: $fontSizeDefault;
+$textSize: 16px;
+$logoHeight: 25px;
+$headerContainerWidth: $appWidth - 100px;
+$searchInputPaddingHorizontal: 20px;
+
+//Film
+$filmPosterWidth: 350px;
+$filmInfoWidth: $headerContainerWidth - $filmPosterWidth - $elementPadding*2;
+
+// Summary
+$summaryContainerWidth: $appWidth - 100px;
+
 //Colors
 
 $color_red: #F55263; // red
 $color_grey: #3C3C3C; // grey
 $color_white: #FFF; // grey
 $color_black: #000; // black
+
+
+@import './containers/Body.scss';
+@import './containers/Header.scss';
+@import './containers/Content.scss';
+@import './components/Footer.scss';

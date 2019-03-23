@@ -28,5 +28,8 @@ $color_black: #000; // black
 
 @import './containers/Body.scss';
 @import './containers/Header.scss';
+@import './components/TopBarSection.scss';
+@import './containers/Search.scss';
+@import './common/Input.scss';
 @import './containers/Content.scss';
 @import './components/Footer.scss';

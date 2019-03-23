@@ -4,6 +4,9 @@ import './main.scss';
 import { Body } from './containers/Body.js';
 
 ReactDOM.render(
-    <Body />,
+    <>
+        <Body content={'no_films'} />
+        <Body content={'films'}/>
+    </>,
     document.getElementById('greeting')
 );

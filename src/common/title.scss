@@ -1,23 +1,23 @@
-.ttl {
+.title {
   font-size: 22px;
   padding-bottom: $elementPadding;
   letter-spacing: 1px;
   color: $color_black;
 }
 
-.ttl-white {
+.title-white {
   color: $color_white;
-
-}
-.ttl-red {
-  color: $color_red;
 }
 
-.ttl-UC {
+.title-uppercase {
   text-transform: uppercase;
 }
 .ttl-big {
   font-size: 28px;
   font-weight: normal;
 
+}
+
+.ttl-red {
+  color: $color_red;
 }

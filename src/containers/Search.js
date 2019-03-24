@@ -1,17 +1,24 @@
 import React from 'react';
 import { Input } from '../common/Input';
-//import {TypeSection} from 'src/components/search/type-section/type-section.js';
-//import {ButtonSection} from 'src/components/search/button-section/button-section.js';
+import { Title } from '../common/Title';
+import { Button } from '../common/Button';
+import { Label } from '../common/Label';
 
 export const Search = () => {
     return  (
         <div className={'header-search'}>
-            <h2>Find your movie</h2>
+            <Title content='Find your movie' type='headline' />
             <Input />
-            {/* <div className={'search-components'}>
-                <TypeSection />
-                <ButtonSection />
-            </div> */}
+            <div className={'search-components'}>
+                <div className={'search-type-section'}>
+                    <Label content={'search by'} type='search' />
+                    <Button content='Title' type='search' />
+                    <Button content='Genre' type='search' />
+                </div>
+                <div>
+                    <Button content='Search' type='search' />
+                </div>
+            </div>
         </div>
     );
 };

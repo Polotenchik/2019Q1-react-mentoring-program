@@ -1,12 +1,11 @@
 import React from 'react';
-import classNames from 'classnames';
-
 
 export const Title = (props) => {
-  //const {ttlRed, ttlWhite, ttlUC, ttlBig, content} = props;
 
     return (
-        <h2>
+        <h2 className={
+            props.type === 'headline' && 'title title-white title-uppercase'
+        }>
             { props.content }
         </h2>
     );

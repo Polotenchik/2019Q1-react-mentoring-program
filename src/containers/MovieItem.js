@@ -7,19 +7,15 @@ export class MovieItem extends Component {
         super(props);
     }
 
-    // onPosterClick = () => {
-    //     console.log('click');
-    //     // this.props.onPosterClick(this.props.info);
-    // }
-
     render() {
-        const { info } = this.props;
-        console.log(info);
+        const { info, handler } = this.props;
+
         return (
             <div className='item'>
                 <MovieItemPoster 
-                    posterLink={ info['poster_path'] } 
-                    // posterClick={ this.onPosterClick } 
+                    posterLink={ info['poster_path'] }
+                    id={ info['id'] } 
+                    handler={ handler } 
                 />
                 <MovieItemInfo 
                     filmTitle={ info['title'] } 

@@ -4,13 +4,16 @@ import { Title } from '../common/Title';
 import { Rating } from '../common/Rating';
 import { Label } from '../common/Label';
 
-const movie = getMoives().data[0];
+export const MovieDescription = (props) => {
 
-export const MovieDescription = () => {
+    const data = getMoives().data;
+    const index = data.findIndex(item => { return item['id'] === props.movie });
+    const movie = data[index];
+
     return (
         <div className="movie-description">
             <div className="movie-description-poster">
-                <img src={movie['poster_path']} />
+                 <img src={ movie['poster_path'] } />
             </div>
             <div className='movie-description-info'>
                 <div className='movie-description-info-header' >
@@ -20,7 +23,7 @@ export const MovieDescription = () => {
                     <div>
                         <Rating value ={ +movie['vote_average'] }/>
                     </div>
-                </div>txtWhite txtItalic 
+                </div> 
                 <p className='caption'>{ movie['tagline'] }</p>
                 <div className='year-min'>
                     <Label 

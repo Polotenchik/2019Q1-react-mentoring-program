@@ -10,7 +10,7 @@ export const Header = (props) => {
             <header className='header' style={{ "background": "#000 url('img/netflix-bg.jpg')" }}>
                 <div className='header-container'>
                     <TopBarSection headerType={ props.headerType } />
-                    <MovieDescription />
+                    <MovieDescription movie={ props.id } />
                 </div>
             </header>
         );
@@ -19,7 +19,7 @@ export const Header = (props) => {
     return (
         <header className='header' style={{ "background": "#000 url('img/netflix-bg.jpg')"}}>
             <div className='header-container'>
-                <TopBarSection / >
+                <TopBarSection />
                 <Search />
             </div>
         </header>

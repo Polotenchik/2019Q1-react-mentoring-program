@@ -6,7 +6,7 @@ export const MovieItemPoster = (props) => {
             <img 
                 src={ props.posterLink } 
                 className='item-poster-img' 
-                // onClick={ posterClick } 
+                onClick={ () => { props.handler(props.id) } } 
             />
         </div>
     );

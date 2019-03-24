@@ -14,7 +14,7 @@ export class MovieItem extends Component {
 
     render() {
         const { info } = this.props;
-        
+        console.log(info);
         return (
             <div className='item'>
                 <MovieItemPoster 

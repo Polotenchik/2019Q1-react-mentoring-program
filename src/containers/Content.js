@@ -6,7 +6,7 @@ import { NoResultsBlock } from '../components/NoResultsBlock';
 const response = getMoives();
 
 export const Content = (props) => {
-    if (props.content === 'films') {
+    if (props.contentType === 'films') {
         return (
             <>
                 {/* <Summary /> */}
@@ -21,7 +21,7 @@ export const Content = (props) => {
                 </div>
             </>
         );
-    } else if (props.content === 'no_films') {
+    } else if (props.contentType === 'no_films') {
         return (<NoResultsBlock />);
     }
 };

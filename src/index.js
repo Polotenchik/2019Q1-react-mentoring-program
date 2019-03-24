@@ -5,8 +5,9 @@ import { Body } from './containers/Body.js';
 
 ReactDOM.render(
     <>
-        <Body content={'no_films'} />
-        <Body content={'films'}/>
+        <Body contentType={'no_films'} headerType={'search'} />
+        <Body contentType={'films'} headerType={'search'} />
+        <Body contentType={'films'} headerType={'info'} />
     </>,
     document.getElementById('greeting')
 );

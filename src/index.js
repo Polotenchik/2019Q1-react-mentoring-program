@@ -1,13 +1,13 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
 import './main.scss';
-import { Body } from './containers/Body.js';
+import ErrorBoundaryContainer from './containers/ErrorBoundaryContainer';
+import { App } from './App';
+
 
 ReactDOM.render(
-    <>
-        <Body contentType={'no_films'} headerType={'search'} />
-        <Body contentType={'films'} headerType={'search'} />
-        <Body contentType={'films'} headerType={'info'} />
-    </>,
+    <ErrorBoundaryContainer>
+        <App />
+    </ErrorBoundaryContainer>,
     document.getElementById('greeting')
 );

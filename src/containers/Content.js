@@ -1,6 +1,7 @@
 import React from 'react';
 import { getMoives } from '../data';
 import { MovieItem } from './MovieItem';
+import { Summary } from './Summary';
 import { NoResultsBlock } from '../components/NoResultsBlock';
 
 const response = getMoives();
@@ -9,7 +10,7 @@ export const Content = (props) => {
     if (props.contentType === 'films') {
         return (
             <>
-                {/* <Summary /> */}
+                <Summary type={ props.headerType } />
                 <div className='results'>
                     { response.data.map((item) => (
                         <MovieItem 

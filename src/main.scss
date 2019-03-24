@@ -25,7 +25,7 @@ $color_grey: #3C3C3C; // grey
 $color_white: #FFF; // grey
 $color_black: #000; // black
 
-
+@import './containers/errorBoundaryContainer.scss';
 @import './containers/Body.scss';
 @import './containers/Header.scss';
 @import './components/TopBarSection.scss';
@@ -34,6 +34,8 @@ $color_black: #000; // black
 @import './containers/MovieItem.scss';
 @import './containers/MovieItemPoster.scss';
 @import './containers/MovieItemInfo.scss';
+@import './containers/MovieDescription.scss';
+@import './containers/Summary.scss';
 @import './containers/Content.scss';
 @import './components/Footer.scss';
 @import './components/NoResultsBlock.scss';

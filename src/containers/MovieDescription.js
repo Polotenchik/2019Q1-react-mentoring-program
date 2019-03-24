@@ -8,25 +8,31 @@ const movie = getMoives().data[0];
 
 export const MovieDescription = () => {
     return (
-        <div className="film">
-            <div className="film-poster">
+        <div className="movie-description">
+            <div className="movie-description-poster">
                 <img src={movie['poster_path']} />
             </div>
-            <div className='film-info'>
-                <div className='film-header' >
+            <div className='movie-description-info'>
+                <div className='movie-description-info-header' >
                     <div>
-                        <Title content={ movie['title']} />
+                        <Title content={ movie['title']} type='info' />
                     </div>
                     <div>
                         <Rating value ={ +movie['vote_average'] }/>
                     </div>
-                </div>
-                <p>{ movie['tagline'] }</p>
+                </div>txtWhite txtItalic 
+                <p className='caption'>{ movie['tagline'] }</p>
                 <div className='year-min'>
-                    <Label content={ movie['release_date'] ? movie['release_date'].slice(0,4): movie['release_date'] } />
-                    <Label content={ movie['overview'] ? movie['overview'] + ' min' : movie['overview'] } />
+                    <Label 
+                        content={ movie['release_date'] ? movie['release_date'].slice(0,4): movie['release_date'] }
+                        type='info'
+                    />
+                    <Label 
+                        content={ movie['runtime'] ? movie['runtime'] + ' min' : movie['runtime'] } 
+                        type='info'
+                    />
                 </div>
-                <p>{ movie['overview']}</p>
+                <p className='caption'>{ movie['overview']}</p>
             </div>
         </div>
     );

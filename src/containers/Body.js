@@ -9,7 +9,7 @@ export const Body = (props) => {
         <>
             <div className="wrapper">
                 <Header headerType={ props.headerType } />
-                <Content contentType={ props.contentType } />
+                <Content contentType={ props.contentType } headerType={ props.headerType } />
             </div>
             <Footer />
         </>

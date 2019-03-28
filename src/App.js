@@ -23,17 +23,14 @@ export default class App extends React.Component {
         return (
             <>
                 <Body 
-                    contentType='no_films' 
                     headerType='search' 
                 />
                 <Body 
-                    contentType='films' 
                     headerType='search' 
                     movies={ data } 
                     getMovieId={ this.getMovie } 
                 />
                 <Body 
-                    contentType='films' 
                     headerType='info' 
                     movies={ data }
                     getMovieId={ this.getMovie } 

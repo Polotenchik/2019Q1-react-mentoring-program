@@ -11,8 +11,8 @@ export const Summary = (props) => {
                 { props.type === 'search' &&  
                     (<div className='film-sort'>
                         <Label content='Sort by '/> 
-                        <Button content='release date' type='sort'/>
-                        <Button content='raring' type='sort' />
+                        <Button content='release date' type='sort' btnGrey />
+                        <Button content='raring' type='sort' btnGrey />
                     </div>)
                 }
             </div>

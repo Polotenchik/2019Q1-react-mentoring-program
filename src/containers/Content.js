@@ -4,8 +4,7 @@ import { Summary } from './Summary';
 import { NoResultsBlock } from '../components/NoResultsBlock';
 
 export const Content = (props) => {
-    if (props.contentType === 'films') {
-
+    if (!!props.movies && props.movies.data.length > 0) {
         return (
             <>
                 <Summary type={ props.headerType } />
@@ -20,7 +19,7 @@ export const Content = (props) => {
                 </div>
             </>
         );
-    } else if (props.contentType === 'no_films') {
+    } else {
         return (<NoResultsBlock />);
     }
 };

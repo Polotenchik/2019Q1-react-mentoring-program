@@ -12,8 +12,8 @@ export const Search = () => {
             <div className={'search-components'}>
                 <div className={'search-type-section'}>
                     <Label content={'search by'} type='search' />
-                    <Button content='Title' type='search' />
-                    <Button content='Genre' type='search' />
+                    <Button content='Title' type='search' btnRed />
+                    <Button content='Genre' type='search' btnRed />
                 </div>
                 <div>
                     <Button content='Search' type='search' />

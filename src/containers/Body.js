@@ -12,7 +12,6 @@ export const Body = (props) => {
                     id={ props.movie }
                 />
                 <Content 
-                    contentType={ props.contentType } 
                     headerType={ props.headerType } 
                     movies={  props.movies }
                     handler = { props.getMovieId } 

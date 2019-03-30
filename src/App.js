@@ -1,5 +1,5 @@
 import React from 'react';
-import { Body } from './containers/Body.js';
+import { Body } from './containers';
 import { getMoives } from './data';
 
 export default class App extends React.Component {

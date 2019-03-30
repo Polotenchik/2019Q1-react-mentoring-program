@@ -1,8 +1,5 @@
 import React from 'react';
-import { Input } from '../common/Input';
-import { Title } from '../common/Title';
-import { Button } from '../common/Button';
-import { Label } from '../common/Label';
+import { Input, Title, Button, Label } from '../../common';
 
 export const Search = () => {
     return  (

@@ -1,8 +1,6 @@
 import React from 'react';
-import { getMoives } from '../data';
-import { Title } from '../common/Title';
-import { Rating } from '../common/Rating';
-import { Label } from '../common/Label';
+import { getMoives } from '../../data';
+import { Title, Rating, Label } from '../../common';
 
 export const MovieDescription = (props) => {
 

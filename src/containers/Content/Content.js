@@ -1,7 +1,6 @@
 import React from 'react';
-import { MovieItem } from './MovieItem';
-import { Summary } from './Summary';
-import { NoResultsBlock } from '../components/NoResultsBlock';
+import { MovieItem, Summary } from '../index';
+import { NoResultsBlock } from '../../components';
 
 export const Content = (props) => {
     if (!!props.movies && props.movies.data.length > 0) {

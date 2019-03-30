@@ -1,7 +1,6 @@
 import React from 'react';
-import { TopBarSection } from '../components/TopBarSection';
-import { Search } from './Search';
-import { MovieDescription } from './MovieDescription';
+import { TopBarSection } from '../../components';
+import { Search, MovieDescription } from '../index';
 
 export const Header = (props) => {
 

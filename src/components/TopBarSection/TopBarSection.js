@@ -1,6 +1,6 @@
 import React from 'react';
-import { Logo } from './Logo';
-import { Button } from '../common/Button';
+import { Logo } from '../index';
+import { Button } from '../../common';
 
 export const TopBarSection = (props) => {
     return  (

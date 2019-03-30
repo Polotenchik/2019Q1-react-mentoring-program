@@ -61,9 +61,15 @@ const config = {
                 test: /\.(png|jpg|gif)$/i,
                 use: [
                     {
-                        loader: 'url-loader',
+                        loader: 'file-loader',
                         options: {
-                        limit: 8192,
+                            name: 'img/[name].[ext]'
+                        }
+                    },
+                    {
+                        loader: 'image-webpack-loader',
+                        options: {
+                            disable: true // webpack@2.x and newer
                         },
                     },
                 ],

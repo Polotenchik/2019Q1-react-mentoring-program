@@ -1,16 +1,13 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
-import CreateElementComponent from './components/react-create-element';
-import ClassElementComponent from './components/react-component.jsx';
-import ClassPureComponent from './components/react-pure-component';
-import { FunctionalComponent } from './components/react-functional-component';
+import './main.scss';
+import ErrorBoundaryContainer from './containers/ErrorBoundaryContainer';
+import App from './App';
+
 
 ReactDOM.render(
-    <>
-        <CreateElementComponent />
-        <ClassElementComponent />
-        <ClassPureComponent />
-        <FunctionalComponent />
-    </>,
+    <ErrorBoundaryContainer>
+        <App />
+    </ErrorBoundaryContainer>,
     document.getElementById('greeting')
 );

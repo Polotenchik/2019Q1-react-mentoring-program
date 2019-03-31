@@ -15,9 +15,7 @@ export const Header = (props) => {
                     : (<>
                         <TopBarSection />
                         <Search />
-                    </>)
-                }
-
+                    </>)}
             </div>
         </header>
     );

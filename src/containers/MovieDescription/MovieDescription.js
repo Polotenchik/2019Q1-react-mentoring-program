@@ -33,7 +33,7 @@ export const MovieDescription = (props) => {
                         type='info'
                     />
                 </div>
-                <p className='caption'>{ movie['overview']}</p>
+                <p className='caption'>{ movie['overview'] }</p>
             </div>
         </div>
     );

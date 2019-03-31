@@ -13,7 +13,7 @@ export const Search = () => {
                     <Button content='Genre' type='search' btnRed />
                 </div>
                 <div>
-                    <Button content='Search' type='search' />
+                    <Button content='Search' type='search' btnGrey />
                 </div>
             </div>
         </div>

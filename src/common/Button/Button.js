@@ -14,7 +14,7 @@ export const Button = (props) => {
 	return (
 		<div className={
 			(props.type === 'header' && itemClass)
-			|| ( props.type === 'search' && 'btn btn-red') 
+			|| ( props.type === 'search' && itemClass) 
 			|| ( props.type === 'sort' && itemClass) 
 			|| null
 		}>
@@ -29,12 +29,12 @@ Button.propTypes = {
 	btnGrey: PropTypes.bool,
 	content: PropTypes.string,
 	id: PropTypes.string
-  };
+};
   
-  Button.defaultProps = {
+Button.defaultProps = {
 	btnWhite: false,
 	btnRed: false,
 	btnGrey: false,
 	content: 'Button',
 	id: ''
-  };
+};

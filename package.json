@@ -6,7 +6,8 @@
     "dev": "cross-env NODE_ENV=development && webpack-dev-server --colors --progress",
     "build": "cross-env NODE_ENV=production && webpack",
     "test": "jest",
-    "coverage": "jest --coverage"
+    "coverage": "jest --coverage",
+    "e2e": "./node_modules/.bin/cypress open"
   },
   "devDependencies": {
     "@babel/core": "7.0.0",
@@ -21,6 +22,7 @@
     "cross-env": "5.2.0",
     "css-loader": "1.0.0",
     "cssnano": "4.1.0",
+    "cypress": "^3.2.0",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.11.2",
     "enzyme-to-json": "^3.3.5",

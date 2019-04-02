@@ -10,6 +10,6 @@
 
 > **npm run coverage** - get coverage 
 
- **npm run e2e** - run e2e tests
+> **npm run e2e** - run e2e tests
 
 > **node app.js** - luanch server on  http://localhost:3000/

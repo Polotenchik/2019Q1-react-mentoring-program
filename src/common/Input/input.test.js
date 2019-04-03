@@ -12,5 +12,10 @@ describe('<Input />', () => {
       />);
       expect(wrapper).toMatchSnapshot();
     });
+
+    it('should render input component', () => {
+      const wrapper = shallow(<Input />);
+      expect(wrapper).toMatchSnapshot();
+    });
   });
 });

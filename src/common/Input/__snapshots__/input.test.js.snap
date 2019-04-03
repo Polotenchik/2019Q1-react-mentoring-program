@@ -7,3 +7,11 @@ exports[`<Input /> Rendering should render input component 1`] = `
   type="text"
 />
 `;
+
+exports[`<Input /> Rendering should render input component 2`] = `
+<input
+  className="search-input"
+  placeholder="Start typing..."
+  type="text"
+/>
+`;

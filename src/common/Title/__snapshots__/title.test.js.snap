@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Title /> Rendering should render the title 1`] = `
+<h2
+  className={null}
+/>
+`;

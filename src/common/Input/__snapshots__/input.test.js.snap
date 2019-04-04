@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Input /> Rendering should render input component 1`] = `
+<input
+  className="search-input"
+  placeholder="foo bar quux"
+  type="text"
+/>
+`;
+
+exports[`<Input /> Rendering should render input component 2`] = `
+<input
+  className="search-input"
+  placeholder="Start typing..."
+  type="text"
+/>
+`;

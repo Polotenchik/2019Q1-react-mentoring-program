@@ -1,8 +1,6 @@
 import React from 'react';
-import { getMoives } from '../data';
-import { Title } from '../common/Title';
-import { Rating } from '../common/Rating';
-import { Label } from '../common/Label';
+import { getMoives } from '../../data';
+import { Title, Rating, Label } from '../../common';
 
 export const MovieDescription = (props) => {
 
@@ -35,7 +33,7 @@ export const MovieDescription = (props) => {
                         type='info'
                     />
                 </div>
-                <p className='caption'>{ movie['overview']}</p>
+                <p className='caption'>{ movie['overview'] }</p>
             </div>
         </div>
     );

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> Rendering should render the button 1`] = `
+<div
+  className={null}
+>
+  Button
+</div>
+`;

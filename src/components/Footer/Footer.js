@@ -1,5 +1,5 @@
 import React from 'react';
-import { Logo }  from './Logo';
+import { Logo }  from '../index';
 
 export const Footer = () => (
     <footer className={'footer'}>

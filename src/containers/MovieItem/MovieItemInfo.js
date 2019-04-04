@@ -8,15 +8,14 @@ export const MovieItemInfo = (props) => {
         <div className='film-title'>
             {   props.filmTitle.length > 16 
                 ? props.filmTitle.slice(0,18) + '...' 
-                :  props.filmTitle 
-            }
+                :  props.filmTitle }
         </div>
         <div className='release-date'>
             { props.releaseDate.slice(0,4) }
         </div>
         </div>
         <div className='item-info-genre'>
-        { props.genre.join(', ') }
+            { props.genre.join(', ') }
         </div>
     </div>
     )

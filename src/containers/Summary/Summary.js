@@ -1,6 +1,5 @@
 import React from 'react';
-import { Label } from '../common/Label';
-import { Button } from '../common/Button';
+import { Label, Button } from '../../common';
 
 export const Summary = (props) => {
     return (

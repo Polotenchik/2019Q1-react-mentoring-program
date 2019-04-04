@@ -4,6 +4,12 @@
 
 > **npm run dev** - start ***development*** mode
 
-> **npm run  build** -  create ***production*** build
+> **npm run build** - create ***production*** build
+
+> **npm run test** - run unit-tests
+
+> **npm run coverage** - get coverage 
+
+> **npm run e2e** - run e2e tests
 
 > **node app.js** - luanch server on  http://localhost:3000/

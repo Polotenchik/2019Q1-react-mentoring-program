@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NoResultsBlock /> <NoResultsBlock /> should render NoResultBlock 1`] = `
+<div
+  className="no-results"
+>
+  No films found
+</div>
+`;

@@ -1,11 +1,10 @@
-
 import React from 'react';
 import PropTypes from 'prop-types';
 
 export const Input = (props) => {
     return (
         <input 
-            className={'search-input'}
+            className={ 'search-input' }
             type='text'
             placeholder={ props.placeholder } 
         />

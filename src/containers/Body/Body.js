@@ -1,7 +1,6 @@
 import React from 'react';
-import { Header } from './Header';
-import { Content } from './Content';
-import { Footer } from '../components/Footer';
+import { Header, Content,  } from '../index';
+import { Footer } from '../../components';
 
 export const Body = (props) => {
     return (

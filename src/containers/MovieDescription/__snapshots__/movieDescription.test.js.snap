@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MovieDescription /> Rendering should render MovieDescription 1`] = `
+<div
+  className="movie-description"
+>
+  <div
+    className="movie-description-poster"
+  >
+    <img
+      src="https://image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
+    />
+  </div>
+  <div
+    className="movie-description-info"
+  >
+    <div
+      className="movie-description-info-header"
+    >
+      <div>
+        <Title
+          content="Fifty Shades Freed"
+          type="info"
+        />
+      </div>
+      <div>
+        <Rating
+          value={6.1}
+        />
+      </div>
+    </div>
+    <p
+      className="caption"
+    >
+      Don't miss the climax
+    </p>
+    <div
+      className="year-min"
+    >
+      <Label
+        content="2018"
+        type="info"
+      />
+      <Label
+        content="106 min"
+        type="info"
+      />
+    </div>
+    <p
+      className="caption"
+    >
+      Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins.
+    </p>
+  </div>
+</div>
+`;

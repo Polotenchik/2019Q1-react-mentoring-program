@@ -1,6 +1,6 @@
 import { CHANGE_SORTING } from '../actionTypes';
 
-const moviesSorting = (state={}, action) => {
+export default (state={}, action) => {
     switch (action.type) {
       case CHANGE_SORTING :
         return {

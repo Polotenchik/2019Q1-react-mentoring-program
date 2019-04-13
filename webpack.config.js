@@ -74,10 +74,6 @@ const config = {
                     },
                 ],
             },
-            {
-                test: /\.json/,
-                use: [{ loader: 'json-loader' }],
-            },
         ],
     },
 
@@ -109,7 +105,7 @@ const config = {
 
     devServer: {
         contentBase: distPath,
-        port: 5000,
+        port: 3000,
         compress: true,
         open: true,
         hot: true,

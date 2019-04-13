@@ -1,5 +1,6 @@
 import React from 'react';
-import { Header, Content } from '../index';
+import { Header } from '../index';
+import Content from '../Content/Content';
 import { Footer } from '../../components';
 
 export const Body = () => {

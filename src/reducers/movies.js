@@ -1,7 +1,7 @@
 import { START_SEARCH, OPEN_MOVIE, CHANGE_SORTING,
-         RESULTS_TO_STORE, RESULTS_TO_STORE, RECOMMENDED_TO_STORE } from '../actionTypes';
+         RESULTS_TO_STORE, RECOMMENDED_TO_STORE } from '../actionTypes';
 
-export const movies = (state={}, action) => {
+export default (state={}, action) => {
     switch (action.type) {
       case START_SEARCH :
         return {

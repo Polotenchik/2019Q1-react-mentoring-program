@@ -1,7 +1,7 @@
 import { OPEN_MOVIE, OPEN_SEARCH, START_SEARCH,
          RESULTS_TO_STORE, RECOMMENDED_TO_STORE } from '../actionTypes';
 
-export const mode = (state={}, action) => {
+export default (state={}, action) => {
     switch (action.type) {
       case OPEN_MOVIE:
         return {

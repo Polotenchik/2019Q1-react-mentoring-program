@@ -1,4 +1,4 @@
-import {  START_SEARCH, RECOMMENDED_TO_STORE, OPEN_MOVIE,
+import {  START_SEARCH, RESULTS_TO_STORE, OPEN_MOVIE,
           RECOMMENDED_TO_STORE, OPEN_SEARCH, CHANGE_SORTING } from './actionTypes';
 
 export const startSearch = (phrase, type) => (

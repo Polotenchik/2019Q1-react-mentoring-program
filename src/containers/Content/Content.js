@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect } from "react-redux";
 import { openMovie } from '../../actions';
-import { MovieItem, Summary } from '../index';
+import { MovieItem } from '../index';
+import Summary from '../Summary/Summary'
 import { NoResultsBlock } from '../../components';
 
 class Content extends React.Component {

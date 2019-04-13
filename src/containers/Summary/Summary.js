@@ -5,7 +5,8 @@ import { changeItem } from '../../actions';
 import { Label, Button } from '../../common';
 import { FilmSort } from './film-sort';
 
-export const Summary = ({ movieMode, searchPhrase, movieNumber, movieModeGenre, searchType, sortBy, onChangeItem }) => {
+const Summary = (props) => {
+    const { movieMode, searchPhrase, movieNumber, movieModeGenre, searchType, sortBy, onChangeItem } = props;
 
     return (
         <div className='summary'>

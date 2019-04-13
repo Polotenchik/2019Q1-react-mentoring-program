@@ -1,12 +1,12 @@
 import React from 'react';
 
-export const MovieItemPoster = (props) => {
+export const MovieItemPoster = ({ posterLink, posterClick }) => {
     return (
         <div className='item-poster'>
             <img 
-                src={ props.posterLink } 
+                src={ posterLink } 
                 className='item-poster-img' 
-                onClick={ () => { props.handler(props.id) } } 
+                onClick={ () => { posterCkick } } 
             />
         </div>
     );

@@ -1,24 +1,27 @@
-import React, {Component} from 'react';
+import React from 'react';
 import { MovieItemPoster } from './MovieItemPoster';
 import { MovieItemInfo } from './MovieItemInfo';
 
-export class MovieItem extends Component {
+export class MovieItem extends React.Component {
     constructor(props) {
         super(props);
     }
 
+    onPosterClick = () => {
+        this.props.onPosterClick(this.props.info);
+    };
+
     render() {
-        const { info, handler } = this.props;
+        const { info } = this.props;
 
         return (
             <div className='item'>
                 <MovieItemPoster 
                     posterLink={ info['poster_path'] }
-                    id={ info['id'] } 
-                    handler={ handler } 
+                    posterClick={ this.onPosterClick }
                 />
                 <MovieItemInfo 
-                    filmTitle={ info['title'] } 
+                    movieTitle={ info['title'] } 
                     releaseDate={ info['release_date'] } 
                     genre={ info['genres'] } 
                 />

@@ -1,4 +1,6 @@
 import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import { composeWithDevTools } from 'redux-devtools-extension';
 import reducers from './reducers/index';
 import state from './initialState.json';
 import { START_SEARCH, OPEN_MOVIE } from './actionTypes';
@@ -60,7 +62,9 @@ const logger = store => next => action => {
 const store = createStore(
     reducers,
     (localStorage['redux-store']) ? JSON.parse(localStorage['redux-store']) : state,
-    applyMiddleware(logger)
+    composeWithDevTools(
+        applyMiddleware(logger))
+    
 );
 
 store.subscribe(() => {

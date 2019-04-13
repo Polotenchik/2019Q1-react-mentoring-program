@@ -2,7 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { openSearch } from '../../actions';
 import { TopBarSection } from '../../components';
-import { Search, MovieDescription } from '../index';
+import Search from '../Search/Search';
+import { MovieDescription } from '../index';
 
 export const Header = ({ movieMode, currentMovie, onOpenSearch }) => {
 

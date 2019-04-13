@@ -1,21 +1,84 @@
 import React from 'react';
-import { Input, Title, Button, Label } from '../../common';
+import { connect } from 'react-redux';
+import { startSearch } from '../../actions';
+import { Input, Title } from '../../common';
+import { TypeSection } from './TypeSection';
+import { ButtonSection } from './ButtonSection';
 
-export const Search = () => {
-    return  (
-        <div className={'header-search'}>
-            <Title content='Find your movie' type='headline' />
-            <Input />
-            <div className={'search-components'}>
-                <div className={'search-type-section'}>
-                    <Label content={'search by'} type='search' />
-                    <Button content='Title' type='search' btnRed />
-                    <Button content='Genre' type='search' btnRed />
+class Search extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+          searchTypes: {
+            list: ['title', 'genres'],
+            active: 'title'
+          },
+          currentInputValue: ''
+        };
+    }
+
+    startSearching = () => {
+        this.props.onSearch(this.state.currentInputValue, this.state.searchTypes.active);
+        this.setState({currentInputValue: ''})
+    };
+
+    enterKeyPressedOnInput = (e) => {
+        if (e.key === 'Enter') {
+          this.startSearching();
+        }
+    };
+
+    changeSearchType = (newType) => {
+        this.setState({
+            searchTypes: {
+                list: this.state.searchTypes.list, 
+                active: newType 
+            }
+        });
+    };
+
+    cloneSearchInput = (el) => {
+        this.setState({currentInputValue: el.target.value});
+    };
+
+    render() {
+        const { searchMode } = this.props;
+
+        if (searchMode) {
+            return  (
+                <div className={'header-search'}>
+                    <Title content='Find your movie' type='headline' />
+                    <Input 
+                        onStartTyping={ this.cloneSearchInput }
+                        value={ this.state.currentInputValue }
+                        onKeyEnterPressed={ this.enterKeyPressedOnInput } 
+                    />
+                    <div className={'search-components'}>
+                        <TypeSection 
+                            searchTypes={ this.state.searchTypes }
+                            searchTypeClick={ this.changeSearchType }
+                        />
+                        <ButtonSection 
+                            parentFormId={ 'search-form' }
+                            searchButtonClick={ this.startSearching }
+                        />
+                    </div>
                 </div>
-                <div>
-                    <Button content='Search' type='search' btnGrey />
-                </div>
-            </div>
-        </div>
-    );
+            );
+        } else {
+            return null;
+        }
+    }
 };
+
+const mapStateToProps = store => ({
+    searchMode: store.mode.search
+});
+
+const mapDispatchToProps = dispatch => ({
+    onSearch(phrase, type) {
+        dispatch(startSearch(phrase, type))
+    }
+});
+  
+export default connect(mapStateToProps, mapDispatchToProps)(Search);

@@ -1,13 +1,25 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
-export const Label = (props) => {
-
+export const Label = ({ labelUC, labelWhite, labelBold, content }) => {
+	const itemClass =classNames({
+		'label': true,
+		'label-uppercase': labelUC,
+		'label-white': labelWhite,
+		'label-bold': labelBold,
+	});
+	
     return (
-      	<div className={
-			(props.type === 'search' && 'label label-white label-uppercase label-bold')
-			|| (props.type === 'info' && 'label label-white label-bold ')
-		}>
-        	{ props.content }
+      	<div className={ itemClass }>
+        	{ content }
       	</div>
     );
+};
+
+Label.defaultProps = {
+  labelBold: false,
+  content: 'Label',
+  labelUC: false,
+  labelWhite: false
 };

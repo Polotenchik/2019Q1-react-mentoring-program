@@ -40,16 +40,16 @@ class Content extends React.Component {
 
     render() {
         const { searchList, recommendedList, mode, sortBy, searchAttributes, movieGenre } = this.props;
-        this.movieList = mode.movie ? [...recommendedList] : [... searchList]; 
+        this.movieList = mode.movie ? [...recommendedList] : [...searchList]; 
         this.movieList = this.sortResult(this.movieList, sortBy.chosenParameter);
-        
+
         if (mode.loadingData && mode.film) {
             return (
                 <div>Loading...</div>
             );
         }
 
-        if (!!this.movieList && this.movieList.length > 0) {
+        if (this.movieList.length) {
             return (
                 <>
                     <Summary />

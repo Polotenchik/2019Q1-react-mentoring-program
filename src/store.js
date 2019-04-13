@@ -2,7 +2,7 @@ import { createStore, applyMiddleware } from 'redux';
 import reducers from './reducers/index';
 import state from './initialState.json';
 import { START_SEARCH, OPEN_MOVIE } from './actionTypes';
-
+import { resultsToStore, recommendedToStore } from './actions';
 
 //TODO: move to helpers
 const searchKeysAliases = {
@@ -15,7 +15,7 @@ const searchKeysAliases = {
 };
 
 //TODO: move to api file
-const RequestToServer = (phrase, searchBy, limit=21) =>
+const RequestToServer = (phrase, searchBy, limit=20) =>
   new Promise((resolves, rejects) => {
     const api = `http://react-cdp-api.herokuapp.com/movies?search=${phrase}&searchBy=${searchBy}&limit=${limit}`;
     const request = new XMLHttpRequest();
@@ -44,7 +44,7 @@ const logger = store => next => action => {
         );
     }
 
-    if (action.type == OPEN_MOVIE) {
+    if (action.type === OPEN_MOVIE) {
         const phrase = action.payload.searchPhrase;
         const type = action.payload.searchType;
         RequestToServer(type, phrase).then(

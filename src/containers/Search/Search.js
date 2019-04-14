@@ -19,7 +19,7 @@ class Search extends React.Component {
 
     startSearching = () => {
         this.props.onSearch(this.state.currentInputValue, this.state.searchTypes.active);
-        this.setState({currentInputValue: ''})
+        this.setState({ currentInputValue: '' })
     };
 
     enterKeyPressedOnInput = (e) => {
@@ -47,7 +47,7 @@ class Search extends React.Component {
         if (searchMode) {
             return  (
                 <div className={'header-search'}>
-                    <Title content='Find your movie' type='headline' />
+                    <Title content='Find your movie' ttlWhite ttlUC />
                     <Input 
                         onStartTyping={ this.cloneSearchInput }
                         value={ this.state.currentInputValue }

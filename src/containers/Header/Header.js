@@ -11,7 +11,7 @@ const Header = ({ movieMode, currentMovie, onOpenSearch }) => {
     return (
         <header className='header' style={{ "background": "#000 url('img/netflix-bg.jpg')" }}>
             <div className='header-container'>
-                <TopBarSection />
+                <TopBarSection  searchButtonClick={ onOpenSearch }  movieMode={ movieMode } />
                 <Search />
                 <MovieDescription info={ currentMovie } active={ movieMode } />
             </div>

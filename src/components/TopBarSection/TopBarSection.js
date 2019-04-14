@@ -1,12 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Logo } from '../index';
 import { Button } from '../../common';
 
-export const TopBarSection = (props) => {
+export const TopBarSection = ({ movieMode, searchButtonClick }) => {
     return  (
         <div className={'topbar'}>
             <Logo/>
-            { (props.headerType === 'info')  && <Button content='search' type='header' btnWhite /> }
+            { movieMode && <Button content='search' btnWhite btnClick={ searchButtonClick }/> }
         </div>
     );
+};
+
+TopBarSection.defaultProps ={
+  movieMode: false
 };

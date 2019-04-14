@@ -13,7 +13,7 @@ const Summary = (props) => {
             <div className='summary-wrapper'>
                 { movieMode && <Label content={'Films by ' + movieModeGenre + ' genre'} /> }
                 { !movieMode && <Label content={'Found ' + movieNumber +' movies for ' + searchPhrase + ' by ' + searchType } /> }
-                {/* <FilmSort sortParameters={sortBy} onParameterClick={onChangeItem}/> */}
+                <FilmSort sortParameters={ sortBy } onParameterClick={ onChangeItem }/>
             </div>
         </div>
     );

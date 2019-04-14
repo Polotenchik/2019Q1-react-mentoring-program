@@ -1,6 +1,18 @@
 import { START_SEARCH, OPEN_MOVIE, CHANGE_SORTING,
          RESULTS_TO_STORE, RECOMMENDED_TO_STORE } from '../actionTypes';
 
+const moviesSorting = (state={}, action) => {
+  switch (action.type) {
+    case CHANGE_SORTING :
+      return {
+        ...state,
+        chosenParameter: action.payload.chosenParameter
+      };
+    default:
+      return state
+  }
+};
+
 export default (state={}, action) => {
     switch (action.type) {
       case START_SEARCH :

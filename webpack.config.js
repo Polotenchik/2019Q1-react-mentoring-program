@@ -105,7 +105,7 @@ const config = {
 
     devServer: {
         contentBase: distPath,
-        port: 3000,
+        port: 5000,
         compress: true,
         open: true,
         hot: true,

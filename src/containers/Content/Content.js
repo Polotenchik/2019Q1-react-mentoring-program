@@ -10,6 +10,7 @@ class Content extends React.Component {
         super(props);
     }
 
+    //TODO: move to helpers
     sortResult = (res, parameter) => {
         const sortParametersMatching = {
           'release date': 'release_date',
@@ -71,6 +72,24 @@ class Content extends React.Component {
 
     }
 };
+
+Content.defaultProps = {
+    searchList: [],
+    recommendedList: [],
+    onOpenMovie: f=>f,
+    onChangeItem: f=>f,
+    mode: {
+      movie: false,
+      search: true,
+      loadingData: false
+    },
+    searchAttributes: {
+      phrase: '',
+      type: 'title'
+    },
+    movieGenre: 'Action'
+  };
+
 
 const mapStateToProps = store => ({
     searchAttributes: store.search,

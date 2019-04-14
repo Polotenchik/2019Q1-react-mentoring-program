@@ -6,7 +6,7 @@ export const MovieItemPoster = ({ posterLink, posterClick }) => {
             <img 
                 src={ posterLink } 
                 className='item-poster-img' 
-                onClick={ () => { posterCkick } } 
+                onClick={ posterClick } 
             />
         </div>
     );

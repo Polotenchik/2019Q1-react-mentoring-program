@@ -29,3 +29,7 @@ export class MovieItem extends React.Component {
         );
     }
 }
+
+MovieItem.defaultProps = {
+    onPosterClick: f => f
+};

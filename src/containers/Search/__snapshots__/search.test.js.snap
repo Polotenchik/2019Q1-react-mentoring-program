@@ -38,7 +38,7 @@ exports[`<Search /> Rendering should render the component in the search mode 1`]
     }
   }
 >
-  <Component
+  <Connect(Search)
     onSearch={[MockFunction]}
     searchMode={true}
   />
@@ -83,7 +83,7 @@ exports[`<Search /> Rendering should render the component with default props 1`]
     }
   }
 >
-  <Component
+  <Connect(Search)
     onSearch={[MockFunction]}
     searchMode={true}
   />

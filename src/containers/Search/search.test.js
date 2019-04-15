@@ -2,7 +2,7 @@ import React from 'react';
 import store from "../../store";
 import { Provider } from 'react-redux';
 import { shallow } from 'enzyme';
-import { Search } from './Search';
+import Search from './Search';
 
 const mockFunc = jest.fn();
 const mockSearchPhraseText = 'star wars';

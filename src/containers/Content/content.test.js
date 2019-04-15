@@ -116,18 +116,6 @@ const mockNoResults = [];
 
 describe('<Content />', () => {
   describe('Rendering', () => {
-
-    // it('should render content', () => {
-    //   const wrapper = render( <Content headerType='search' movies={ mockMovies } />);
-    //   expect(wrapper).toMatchSnapshot();
-    // });
-
-    // it('should render content with no results', () => {
-    //   const wrapper = render( <Content headerType='search' movies={ mockNoResults } />);
-    //   expect(wrapper).toMatchSnapshot();
-    // });
-
-
     it('should render the component with default props', () => {
       const wrapper = render( <Provider store={store}><Content sortBy={ mockSortBy1 }/></Provider> );
       expect(wrapper).toMatchSnapshot();
@@ -154,7 +142,7 @@ describe('<Content />', () => {
     });
 
     it('should render the component in the search mode with an active loadingData status', () => {
-      const wrapper = render( <Provider store={store}><Results sortBy={mockSortBy2} searchList={mockSomeResults} searchAttributes ={mockSearchingAttributes3}  mode={mode3}/></Provider> );
+      const wrapper = render( <Provider store={store}><Content sortBy={mockSortBy2} searchList={mockSomeResults} searchAttributes ={mockSearchingAttributes3}  mode={mode3}/></Provider> );
       expect(wrapper).toMatchSnapshot();
     });
 

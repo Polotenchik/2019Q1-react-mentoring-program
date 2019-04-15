@@ -13,13 +13,13 @@ describe('<Label />', () => {
   });
   describe('Configuration', () => {
     it('can set white color for the text', () => {
-      expect(shallow(<Label type='search' />).is('.label-white')).toBe(true);
+      expect(shallow(<Label labelWhite />).is('.label-white')).toBe(true);
     });
     it('can transform the text to the uppercase', () => {
-      expect(shallow(<Label type='search' />).is('.label-uppercase')).toBe(true);
+      expect(shallow(<Label labelUC />).is('.label-uppercase')).toBe(true);
     });
     it('can set the bold weight for the text', () => {
-      expect(shallow(<Label type='info' />).is('.label-bold')).toBe(true);
+      expect(shallow(<Label labelBold />).is('.label-bold')).toBe(true);
     });
   });
 });

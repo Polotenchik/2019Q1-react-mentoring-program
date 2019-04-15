@@ -1,11 +1,52 @@
 import React from 'react';
 import { Header } from './Header';
-import { shallow } from 'enzyme';
+import {Provider} from 'react-redux';
+import { shallow, render } from 'enzyme';
+import store from '../../store';
+
+// describe('<Header />', () => {
+//   describe('Rendering', () => {
+//     it('should render default header', () => {
+//       const wrapper = shallow(<Header />);
+//       expect(wrapper).toMatchSnapshot();
+//     });
+//   });
+// });
+
+
+const mockFunc = jest.fn();
+
+const mockFilm = {
+  "id": 333339,
+  "title": "Ready Player One",
+  "tagline": "A better reality awaits.",
+  "vote_average": 8.1,
+  "vote_count": 617,
+  "release_date": "2018-03-28",
+  "poster_path": "https://image.tmdb.org/t/p/w500/pU1ULUq8D3iRxl1fdX2lZIzdHuI.jpg",
+  "overview": "When the creator of a popular video game system dies, a virtual contest is created to compete for his fortune.",
+  "budget": 175000000,
+  "revenue": 0,
+  "genres": [
+    "Adventure",
+    "Science Fiction",
+    "Action"
+  ],
+  "runtime": 140
+};
 
 describe('<Header />', () => {
   describe('Rendering', () => {
-    it('should render default header', () => {
-      const wrapper = shallow(<Header />);
+    it('should render the component in search mode', () => {
+      const wrapper = render(<Provider store={store}><Header onOpenSearch={mockFunc} currentMovie={mockFilm} movieMode={false} /></Provider>);
+      expect(wrapper).toMatchSnapshot();
+    });
+    it('should render the component in film mode', () => {
+      const wrapper = render(<Provider store={store}><Header onOpenSearch={mockFunc} currentMovie={mockFilm} movieMode /></Provider>);
+      expect(wrapper).toMatchSnapshot();
+    });
+    it('should render the component with default props', () => {
+      const wrapper = render(<Provider store={store}><Header onOpenSearch={mockFunc} /></Provider>);
       expect(wrapper).toMatchSnapshot();
     });
   });

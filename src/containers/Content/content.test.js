@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'enzyme';
-import { Content } from './Content';
+import Content from './Content';
 import store from '../../store';
 import { Provider } from 'react-redux';
 

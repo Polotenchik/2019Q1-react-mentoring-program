@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Content /> Rendering should render the component in the film mode with an active loadingData status 1`] = `
+<div
+  class="no-results"
+>
+  No films found
+</div>
+`;
+
+exports[`<Content /> Rendering should render the component in the film mode with results sorted by the rating 1`] = `
+<div
+  class="no-results"
+>
+  No films found
+</div>
+`;
+
+exports[`<Content /> Rendering should render the component in the film mode with results sorted by the release date 1`] = `
+<div
+  class="no-results"
+>
+  No films found
+</div>
+`;
+
+exports[`<Content /> Rendering should render the component in the search mode with no results 1`] = `
+<div
+  class="no-results"
+>
+  No films found
+</div>
+`;
+
+exports[`<Content /> Rendering should render the component in the search mode with results sorted by the rating 1`] = `
+<div
+  class="no-results"
+>
+  No films found
+</div>
+`;
+
+exports[`<Content /> Rendering should render the component in the search mode with results sorted by the release date 1`] = `
+<div
+  class="no-results"
+>
+  No films found
+</div>
+`;
+
+exports[`<Content /> Rendering should render the component in the search mode with the welcome message 1`] = `
+<div
+  class="no-results"
+>
+  No films found
+</div>
+`;
+
+exports[`<Content /> Rendering should render the component with default props 1`] = `
+<div
+  class="no-results"
+>
+  No films found
+</div>
+`;

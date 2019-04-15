@@ -1,17 +1,8 @@
 import React from 'react';
-import { Header } from './Header';
+import Header from './Header';
 import {Provider} from 'react-redux';
 import { shallow, render } from 'enzyme';
 import store from '../../store';
-
-// describe('<Header />', () => {
-//   describe('Rendering', () => {
-//     it('should render default header', () => {
-//       const wrapper = shallow(<Header />);
-//       expect(wrapper).toMatchSnapshot();
-//     });
-//   });
-// });
 
 
 const mockFunc = jest.fn();

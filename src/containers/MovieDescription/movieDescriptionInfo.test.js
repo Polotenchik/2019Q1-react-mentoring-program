@@ -1,5 +1,5 @@
 import React from 'react';
-import { MovieDescription } from './MovieDescription';
+import { MovieDescriptionInfo } from './MovieDescriptionInfo';
 import { shallow } from 'enzyme';
 
 const mockFilm = {
@@ -21,14 +21,11 @@ const mockFilm = {
   "runtime": 140
 };
 
-describe('<MovieDescription />', () => {
+describe('<MovieDescriptionInfo />', () => {
   describe('Rendering', () => {
     it('should render the component', () => {
-      const wrapper = shallow(<MovieDescription active info={ mockFilm } />);
+      const wrapper = shallow(<MovieDescriptionInfo info={ mockFilm }/>);
       expect(wrapper).toMatchSnapshot();
-    });
-    it('should not render the component without active prop', () => {
-      expect(shallow(<MovieDescription info={ mockFilm } />).is('.movie')).toBe(false);
     });
   });
 });

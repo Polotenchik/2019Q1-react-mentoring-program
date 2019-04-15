@@ -11,7 +11,7 @@ export const startSearch = (phrase, type) => (
       }
     });
   
-  export const resultsToStore = results =>
+export const resultsToStore = results =>
     ({type: RESULTS_TO_STORE,
       payload: {
         foundResults: results,
@@ -19,7 +19,7 @@ export const startSearch = (phrase, type) => (
       }
     });
   
-  export const openMovie = movie =>
+export const openMovie = movie =>
     ({type: OPEN_MOVIE,
      payload: {
         movieToOpen: { ...movie },
@@ -37,12 +37,12 @@ export const startSearch = (phrase, type) => (
       }
     });
   
-  export const openSearch = () =>
+export const openSearch = () =>
     ({type: OPEN_SEARCH,
       payload: {}
     });
   
-  export const changeItem = newCriterion =>
+export const changeItem = newCriterion =>
     ({type: CHANGE_SORTING,
       payload: {
         chosenParameter: newCriterion

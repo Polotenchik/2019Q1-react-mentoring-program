@@ -2,7 +2,9 @@
 
 exports[`<Button /> Rendering should render the button 1`] = `
 <div
-  className={null}
+  className="btn"
+  id=""
+  onClick={[Function]}
 >
   Button
 </div>

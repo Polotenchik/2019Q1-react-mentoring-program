@@ -5,8 +5,8 @@ exports[`<Body /> Rendering should render the Body 1`] = `
   <div
     className="wrapper"
   >
-    <Header />
-    <Content />
+    <Connect(Header) />
+    <Connect(Content) />
   </div>
   <Footer />
 </Fragment>

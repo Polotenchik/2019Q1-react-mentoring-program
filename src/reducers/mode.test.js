@@ -115,4 +115,24 @@ describe('mode reducer', () => {
           loadingData: true
       })
   });
+
+  it('DEFAULT success', () => {
+    const state = {
+      search: true,
+      movie: false,
+      loadingData: false
+    };
+
+    const action = {
+      type: 'FOO',
+    };
+
+    const results = mode(state, action)
+    expect(results)
+      .toEqual({
+          search: true,
+          movie: false,
+          loadingData: false
+      });
+  });
 });

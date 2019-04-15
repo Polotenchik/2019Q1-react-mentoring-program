@@ -2,7 +2,7 @@
 
 exports[`<Label /> Rendering should render the label 1`] = `
 <div
-  className={false}
+  className="label"
 >
   foo bar
 </div>

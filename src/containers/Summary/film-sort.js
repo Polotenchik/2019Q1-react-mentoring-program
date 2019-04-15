@@ -1,22 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Button, Label } from '../../common';
+import { Button, Label } from '../../common';
 
 export const FilmSort = ({sortParameters, onParameterClick}) => (
     <div className='film-sort'>
         <Label content='Sort by '/>
           {sortParameters.parameters.map(
               (item) => (
-                <Button key={item}
-                        btnTranspRed  = {item === sortParameters.chosenParameter}
-                        btnTransp  = {item !== sortParameters.chosenParameter}
-                        btnClick = {onParameterClick}
-                        btnBold
-                        content = {item}
+                <Button 
+                    key={ item }
+                    btnTranspRed={ item === sortParameters.chosenParameter }
+                    btnTransp={ item !== sortParameters.chosenParameter }
+                    btnClick={ onParameterClick }
+                    btnBold
+                    content={ item }
                 />
             ))}
-      </div>
-    );
+    </div>);
 
 FilmSort.propTypes = {
     onParameterClick: PropTypes.func,
@@ -26,6 +26,7 @@ FilmSort.propTypes = {
     }).isRequired
 
 };
+
 FilmSort.defaultProps = {
     onParameterClick: ()=>{}
 };

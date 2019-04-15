@@ -1,0 +1,186 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TypeSection /> Rendering should render the component in the film mode with sorting by rating 1`] = `
+<div
+  class="summary"
+>
+  <div
+    class="summary-wrapper"
+  >
+    <div
+      class="label"
+    >
+      Found 0 movies for  by 
+    </div>
+    <div
+      class="film-sort"
+    >
+      <div
+        class="label"
+      >
+        Sort by 
+      </div>
+      <div
+        class="btn btn-bold btn-transp-red"
+        id=""
+      >
+        release date
+      </div>
+      <div
+        class="btn btn-bold btn-transp"
+        id=""
+      >
+        rating
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<TypeSection /> Rendering should render the component in the film mode with sorting by release date 1`] = `
+<div
+  class="summary"
+>
+  <div
+    class="summary-wrapper"
+  >
+    <div
+      class="label"
+    >
+      Found 0 movies for  by 
+    </div>
+    <div
+      class="film-sort"
+    >
+      <div
+        class="label"
+      >
+        Sort by 
+      </div>
+      <div
+        class="btn btn-bold btn-transp-red"
+        id=""
+      >
+        release date
+      </div>
+      <div
+        class="btn btn-bold btn-transp"
+        id=""
+      >
+        rating
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<TypeSection /> Rendering should render the component in the search mode with sorting by rating 1`] = `
+<div
+  class="summary"
+>
+  <div
+    class="summary-wrapper"
+  >
+    <div
+      class="label"
+    >
+      Found 0 movies for  by 
+    </div>
+    <div
+      class="film-sort"
+    >
+      <div
+        class="label"
+      >
+        Sort by 
+      </div>
+      <div
+        class="btn btn-bold btn-transp-red"
+        id=""
+      >
+        release date
+      </div>
+      <div
+        class="btn btn-bold btn-transp"
+        id=""
+      >
+        rating
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<TypeSection /> Rendering should render the component in the search mode with sorting by release date 1`] = `
+<div
+  class="summary"
+>
+  <div
+    class="summary-wrapper"
+  >
+    <div
+      class="label"
+    >
+      Found 0 movies for  by 
+    </div>
+    <div
+      class="film-sort"
+    >
+      <div
+        class="label"
+      >
+        Sort by 
+      </div>
+      <div
+        class="btn btn-bold btn-transp-red"
+        id=""
+      >
+        release date
+      </div>
+      <div
+        class="btn btn-bold btn-transp"
+        id=""
+      >
+        rating
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<TypeSection /> Rendering should render the component with default props 1`] = `
+<div
+  class="summary"
+>
+  <div
+    class="summary-wrapper"
+  >
+    <div
+      class="label"
+    >
+      Found 0 movies for  by 
+    </div>
+    <div
+      class="film-sort"
+    >
+      <div
+        class="label"
+      >
+        Sort by 
+      </div>
+      <div
+        class="btn btn-bold btn-transp-red"
+        id=""
+      >
+        release date
+      </div>
+      <div
+        class="btn btn-bold btn-transp"
+        id=""
+      >
+        rating
+      </div>
+    </div>
+  </div>
+</div>
+`;

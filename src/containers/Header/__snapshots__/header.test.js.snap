@@ -1,19 +1,199 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Header /> Rendering should render default header 1`] = `
+exports[`<Header /> Rendering should render the component in film mode 1`] = `
 <header
-  className="header"
-  style={
-    Object {
-      "background": "#000 url('img/netflix-bg.jpg')",
-    }
-  }
+  class="header"
+  style="background:#000 url('img/netflix-bg.jpg')"
 >
   <div
-    className="header-container"
+    class="header-container"
   >
-    <TopBarSection />
-    <Search />
+    <div
+      class="topbar"
+    >
+      <img
+        class="logo"
+        src="img/logo-netflixroulette.png"
+      />
+    </div>
+    <div
+      class="header-search"
+    >
+      <h2
+        class="title title-white title-uppercase"
+      >
+        Find your movie
+      </h2>
+      <input
+        class="search-input"
+        placeholder="Start typing..."
+        type="text"
+        value=""
+      />
+      <div
+        class="search-components"
+      >
+        <div
+          class="search-type-section"
+        >
+          <div
+            class="label label-uppercase label-white"
+          >
+            search by
+          </div>
+          <div
+            class="btn btn-red btn-UC"
+            id=""
+          >
+            title
+          </div>
+          <div
+            class="btn btn-grey btn-UC"
+            id=""
+          >
+            genres
+          </div>
+        </div>
+        <div
+          class="btn btn-big btn-red"
+          id=""
+        >
+          Search
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+`;
+
+exports[`<Header /> Rendering should render the component in search mode 1`] = `
+<header
+  class="header"
+  style="background:#000 url('img/netflix-bg.jpg')"
+>
+  <div
+    class="header-container"
+  >
+    <div
+      class="topbar"
+    >
+      <img
+        class="logo"
+        src="img/logo-netflixroulette.png"
+      />
+    </div>
+    <div
+      class="header-search"
+    >
+      <h2
+        class="title title-white title-uppercase"
+      >
+        Find your movie
+      </h2>
+      <input
+        class="search-input"
+        placeholder="Start typing..."
+        type="text"
+        value=""
+      />
+      <div
+        class="search-components"
+      >
+        <div
+          class="search-type-section"
+        >
+          <div
+            class="label label-uppercase label-white"
+          >
+            search by
+          </div>
+          <div
+            class="btn btn-red btn-UC"
+            id=""
+          >
+            title
+          </div>
+          <div
+            class="btn btn-grey btn-UC"
+            id=""
+          >
+            genres
+          </div>
+        </div>
+        <div
+          class="btn btn-big btn-red"
+          id=""
+        >
+          Search
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+`;
+
+exports[`<Header /> Rendering should render the component with default props 1`] = `
+<header
+  class="header"
+  style="background:#000 url('img/netflix-bg.jpg')"
+>
+  <div
+    class="header-container"
+  >
+    <div
+      class="topbar"
+    >
+      <img
+        class="logo"
+        src="img/logo-netflixroulette.png"
+      />
+    </div>
+    <div
+      class="header-search"
+    >
+      <h2
+        class="title title-white title-uppercase"
+      >
+        Find your movie
+      </h2>
+      <input
+        class="search-input"
+        placeholder="Start typing..."
+        type="text"
+        value=""
+      />
+      <div
+        class="search-components"
+      >
+        <div
+          class="search-type-section"
+        >
+          <div
+            class="label label-uppercase label-white"
+          >
+            search by
+          </div>
+          <div
+            class="btn btn-red btn-UC"
+            id=""
+          >
+            title
+          </div>
+          <div
+            class="btn btn-grey btn-UC"
+            id=""
+          >
+            genres
+          </div>
+        </div>
+        <div
+          class="btn btn-big btn-red"
+          id=""
+        >
+          Search
+        </div>
+      </div>
+    </div>
   </div>
 </header>
 `;

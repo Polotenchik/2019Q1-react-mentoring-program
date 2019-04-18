@@ -74,10 +74,6 @@ const config = {
                     },
                 ],
             },
-            {
-                test: /\.json/,
-                use: [{ loader: 'json-loader' }],
-            },
         ],
     },
 

@@ -1,13 +1,17 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
 import './main.scss';
+import { Provider } from 'react-redux';
 import ErrorBoundaryContainer from './containers/ErorrBoundary/ErrorBoundaryContainer';
-import App from './App';
+import { Body } from './containers';
+import store from './store';
 
 
 ReactDOM.render(
-    <ErrorBoundaryContainer>
-        <App />
-    </ErrorBoundaryContainer>,
+    <Provider store={ store }>
+        <ErrorBoundaryContainer>
+            <Body />
+        </ErrorBoundaryContainer>
+    </Provider>,
     document.getElementById('greeting')
 );

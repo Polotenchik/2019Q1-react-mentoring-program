@@ -2,6 +2,8 @@
 
 exports[`<Title /> Rendering should render the title 1`] = `
 <h2
-  className={null}
-/>
+  className="title"
+>
+  Title
+</h2>
 `;

@@ -1,22 +1,39 @@
 import React from 'react';
 import { MovieItemPoster } from './MovieItemPoster';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
+
+const mockLinkText ='https://image.tmdb.org/t/p/w500/eKi8dIrr8voobbaGzDpe8w0PVbC.jpg';
+const mockFunc = jest.fn();
 
 describe('<MovieItemPoster />', () => {
-    describe('Check behavior MovieItemPoster component', () => {
-      it('should be call handler', () => {
-        const handler = jest.fn();
-        const component = mount(<MovieItemPoster handler={ handler } />);
-        const imgPoster = component.find('.item-poster-img').simulate('click');
-        expect(handler).toHaveBeenCalled();
-      });
-
-      it('should be return id from handler', () => {
-        const handler = jest.fn((id) => id);
-        const id = 337167;
-        const component = mount(<MovieItemPoster handler={ handler } />);
-        const imgPoster = component.find('.item-poster-img').simulate('click');
-        expect(handler(id)).toBe(id);
-      });
+  describe('Rendering', () => {
+    it('should render the component', () => {
+      const wrapper = shallow(
+        <MovieItemPoster 
+          posterLink={ mockLinkText }
+          posterClick={ mockFunc }
+        />
+      );
+      expect(wrapper).toMatchSnapshot();
     });
+    it('should render the component with default props', () => {
+      const wrapper = shallow(
+        <MovieItemPoster 
+          posterLink={ mockLinkText }
+          posterClick={ mockFunc }
+        />
+      );
+      expect(wrapper).toMatchSnapshot();
+    });
+  });
+  describe('Behavior', () => {
+    it('invokes onClick', () => {
+      shallow(<MovieItemPoster 
+        posterClick={ mockFunc } 
+        posterLink={ mockLinkText } />)
+        .find('img')
+        .simulate('click');
+      expect(mockFunc).toHaveBeenCalled();
+    });
+  });
 });

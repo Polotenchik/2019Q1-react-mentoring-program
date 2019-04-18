@@ -12,16 +12,16 @@ describe('<Title />', () => {
 
   describe('Configuration', () => {
     it('can be set as white title', () => {
-      expect(shallow(<Title type='headline' />).is('.title-white')).toBe(true);
+      expect(shallow(<Title ttlWhite />).is('.title-white')).toBe(true);
     });
     it('can be set as uppercase title', () => {
-        expect(shallow(<Title type='headline' />).is('.title-uppercase')).toBe(true);
+        expect(shallow(<Title ttlUC />).is('.title-uppercase')).toBe(true);
       });
     it('can be set as red title', () => {
-      expect(shallow(<Title type='info' />).is('.title-red')).toBe(true);
+      expect(shallow(<Title ttlRed />).is('.title-red')).toBe(true);
     });
     it('can be set as big title', () => {
-        expect(shallow(<Title type='info' />).is('.title-big')).toBe(true);
+        expect(shallow(<Title ttlBig />).is('.title-big')).toBe(true);
       });
   });
 });

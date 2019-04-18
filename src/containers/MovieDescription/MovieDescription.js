@@ -1,40 +1,22 @@
 import React from 'react';
-import { getMoives } from '../../data';
-import { Title, Rating, Label } from '../../common';
+import PropTypes from 'prop-types';
+import { MovieDescriptionInfo } from './MovieDescriptionInfo';
+import { MovieDescriptionPoster } from './MovieDescriptionPoster'
 
-export const MovieDescription = (props) => {
-
-    const data = getMoives().data;
-    const index = data.findIndex(item => { return item['id'] === props.movie });
-    const movie = data[index];
-
-    return (
-        <div className="movie-description">
-            <div className="movie-description-poster">
-                 <img src={ movie['poster_path'] } />
+export const MovieDescription = ({ active, info }) => {
+    if (active && info) {
+       return ( 
+            <div className="movie-description">
+                <MovieDescriptionPoster posterPath={ info['poster_path'] } />
+                <MovieDescriptionInfo info={ info } />
             </div>
-            <div className='movie-description-info'>
-                <div className='movie-description-info-header' >
-                    <div>
-                        <Title content={ movie['title']} type='info' />
-                    </div>
-                    <div>
-                        <Rating value ={ +movie['vote_average'] }/>
-                    </div>
-                </div> 
-                <p className='caption'>{ movie['tagline'] }</p>
-                <div className='year-min'>
-                    <Label 
-                        content={ movie['release_date'] ? movie['release_date'].slice(0,4): movie['release_date'] }
-                        type='info'
-                    />
-                    <Label 
-                        content={ movie['runtime'] ? movie['runtime'] + ' min' : movie['runtime'] } 
-                        type='info'
-                    />
-                </div>
-                <p className='caption'>{ movie['overview'] }</p>
-            </div>
-        </div>
-    );
+        ); 
+    } else {
+        return null;
+    }
+};
+
+MovieDescription.defaulProps = {
+    active: false,
+    info: { }
 };

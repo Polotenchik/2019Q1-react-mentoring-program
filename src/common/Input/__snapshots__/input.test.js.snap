@@ -5,6 +5,7 @@ exports[`<Input /> Rendering should render input component 1`] = `
   className="search-input"
   placeholder="foo bar quux"
   type="text"
+  value=""
 />
 `;
 
@@ -13,5 +14,6 @@ exports[`<Input /> Rendering should render input component 2`] = `
   className="search-input"
   placeholder="Start typing..."
   type="text"
+  value=""
 />
 `;

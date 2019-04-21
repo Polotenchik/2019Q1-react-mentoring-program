@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from "react-redux";
-import { changeItem } from '../../actions';
+import { changeItem } from '../../redux/mode/mode.actions';
 import { Label, Button } from '../../common';
 import { FilmSort } from './film-sort';
 

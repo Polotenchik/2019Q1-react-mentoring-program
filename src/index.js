@@ -4,7 +4,7 @@ import './main.scss';
 import { Provider } from 'react-redux';
 import ErrorBoundaryContainer from './containers/ErorrBoundary/ErrorBoundaryContainer';
 import { Body } from './containers';
-import store from './store';
+import store from './redux/store/store';
 
 
 ReactDOM.render(

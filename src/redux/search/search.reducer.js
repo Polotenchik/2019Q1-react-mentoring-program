@@ -1,4 +1,4 @@
-import { START_SEARCH } from '../actionTypes';
+import { START_SEARCH } from './search.constants';
  
 export default (state={}, action) => {
     switch (action.type) {
@@ -8,6 +8,6 @@ export default (state={}, action) => {
         type: action.payload.searchType,
       };
       default:
-        return state
+        return state;
     }
 };

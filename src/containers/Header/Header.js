@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { openSearch } from '../../actions';
+import { openSearch } from '../../redux/mode/mode.actions';
 import { TopBarSection } from '../../components';
 import Search from '../Search/Search';
 import { MovieDescription } from '../index';

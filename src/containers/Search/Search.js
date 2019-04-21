@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { startSearch } from '../../actions';
+import { startSearch } from '../../redux/search/search.actions';
 import { Input, Title } from '../../common';
 import { TypeSection } from './TypeSection';
 import { ButtonSection } from './ButtonSection';

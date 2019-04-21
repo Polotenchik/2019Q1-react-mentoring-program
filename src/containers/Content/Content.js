@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from "react-redux";
-import { openMovie } from '../../actions';
+import { openMovie } from '../../redux/movies/movies.actions';
 import { MovieItem } from '../index';
 import Summary from '../Summary/Summary'
 import { NoResultsBlock } from '../../components';
@@ -89,7 +89,6 @@ Content.defaultProps = {
     },
     movieGenre: 'Action'
   };
-
 
 const mapStateToProps = store => ({
     searchAttributes: store.search,

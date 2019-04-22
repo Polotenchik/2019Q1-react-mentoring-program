@@ -2,7 +2,7 @@ import React from 'react';
 import { MovieItem } from '../index';
 import Summary from '../Summary/Summary'
 import { NoResultsBlock } from '../../components';
-import { Link, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default class ContentView extends React.Component {
     constructor(props) {

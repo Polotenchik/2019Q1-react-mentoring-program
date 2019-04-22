@@ -2,6 +2,7 @@ import React from 'react';
 import { MovieItem } from '../index';
 import Summary from '../Summary/Summary'
 import { NoResultsBlock } from '../../components';
+import { Link, Route } from 'react-router-dom';
 
 export default class ContentView extends React.Component {
     constructor(props) {
@@ -55,11 +56,13 @@ export default class ContentView extends React.Component {
                     <Summary />
                     <div className='results'>
                         { this.movieList.map((item) => (
-                            <MovieItem 
-                                key={ item['id'] }
-                                info={ item }
-                                onPosterClick={ this.chooseMovieByClick }
-                            />
+                            <Link to={`/film/${item['id']}`}> 
+                                <MovieItem 
+                                    key={ item['id'] }
+                                    info={ item }
+                                    onPosterClick={ this.chooseMovieByClick }
+                                />
+                            </Link>
                         ))}
                     </div>
                 </>

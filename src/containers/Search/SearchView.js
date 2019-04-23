@@ -9,7 +9,7 @@ export default class SearchView extends React.Component {
         this.state = {
           searchTypes: {
             list: ['title', 'genres'],
-            active: 'title'
+            active: this.props.searchType
           },
           currentInputValue: ''
         };
@@ -17,7 +17,7 @@ export default class SearchView extends React.Component {
 
     startSearching = () => {
         this.props.onSearch(this.state.currentInputValue, this.state.searchTypes.active);
-        this.setState({ currentInputValue: '' })
+        this.setState({ currentInputValue: this.state.search.phrase })
     };
 
     enterKeyPressedOnInput = (e) => {

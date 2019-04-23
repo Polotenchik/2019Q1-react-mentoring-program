@@ -1,9 +1,9 @@
 import React from 'react';
 
-export const Whooops404 = ({ location }) => {
+export const Whooops404 = () => {
     return (
         <div className={'no-results'}>
-            Resource not found at { location.pathname }
+            Resource not found
         </div>
     );
 };

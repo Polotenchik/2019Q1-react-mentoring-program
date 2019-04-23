@@ -106,6 +106,7 @@ const config = {
     devServer: {
         contentBase: distPath,
         port: 5000,
+        historyApiFallback: true,
         compress: true,
         open: true,
         hot: true,

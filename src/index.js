@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
 import './main.scss';
-import { Router, Route, Switch } from 'react-router-dom'; 
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'; 
 import { Provider } from 'react-redux';
 import createBrowserHistory from 'history/createBrowserHistory';
 import ErrorBoundaryContainer from './containers/ErorrBoundary/ErrorBoundaryContainer';
@@ -12,13 +12,17 @@ import store from './redux/store/store';
 const history = createBrowserHistory();
 
 ReactDOM.render(
-    <Provider store={ store }>
-        <Router history={ history }>
+    <Router>
+        <Provider store={ store }>
             <ErrorBoundaryContainer>
-                    <Route path="404_page" component={ Whooops404 }/>
-                    <Route path='/' component={ Body } />
+                <Switch>
+                    <Route exact path="/" component={ Body }/>
+                    <Route exact path="/search" component={ Body }/>
+                    <Route exact path="/film/:id"  component={ Body }/>
+                    <Route path="*" component={ Whooops404 } />
+                </Switch>
             </ErrorBoundaryContainer>
-        </Router>
-    </Provider>,
+        </Provider>
+    </Router>,
     document.getElementById('greeting')
 );

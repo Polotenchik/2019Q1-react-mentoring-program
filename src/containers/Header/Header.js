@@ -1,28 +1,6 @@
-import React from 'react';
 import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
-import { openSearch } from '../../actions';
-import { TopBarSection } from '../../components';
-import Search from '../Search/Search';
-import { MovieDescription } from '../index';
-
-const Header = ({ movieMode, currentMovie, onOpenSearch }) => {
-
-    return (
-        <header className='header' style={{ "background": "#000 url('img/netflix-bg.jpg')" }}>
-            <div className='header-container'>
-                <TopBarSection  searchButtonClick={ onOpenSearch }  movieMode={ movieMode } />
-                <Search />
-                <MovieDescription info={ currentMovie } active={ movieMode } />
-            </div>
-        </header>
-    );
-};
-
-Header.defaultProps = {
-    filmMode: false,
-    currentFilm: {}
-};
+import { HeaderView } from './HeaderView';
+import { openSearch } from '../../redux/mode/mode.actions';
 
 const mapStateToProps = store => ({
     movieMode: store.mode.movie,
@@ -35,4 +13,4 @@ const mapDispatchToProps = dispatch => ({
     }
 });
   
-export default connect(mapStateToProps, mapDispatchToProps)(Header);
+export default connect(mapStateToProps, mapDispatchToProps)(HeaderView);

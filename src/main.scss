@@ -2,6 +2,9 @@ $appWidth: 1150px;
 $fontFamily: Arial, "Helvetica Neue", Helvetica, sans-serif;
 $fontSizeDefault: 14px;
 
+a {
+    text-decoration: none;
+}
 
 $elementHeight: 30px; //buttons, labels
 $elementPadding: 20px;

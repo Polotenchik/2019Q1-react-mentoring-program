@@ -1,10 +1,10 @@
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import reducers from './reducers/index';
-import state from './initialState.json';
-import { START_SEARCH, OPEN_MOVIE } from './actionTypes';
-import { resultsToStore, recommendedToStore } from './actions';
+import reducers from '../reducers';
+import state from '../initialState.json';
+import { START_SEARCH, OPEN_MOVIE } from './store.constants';
+import { resultsToStore, recommendedToStore } from './store.actions';
 
 //TODO: move to helpers
 const searchKeysAliases = {
@@ -52,7 +52,7 @@ const logger = store => next => action => {
         RequestToServer(type, phrase).then(
           info => store.dispatch(recommendedToStore(info.data)),
           err => console.error(
-            new Error("cannot load films from server"))
+            new Error("Cannot load films from server"))
         );
     }
 

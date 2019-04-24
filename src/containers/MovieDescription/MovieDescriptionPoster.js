@@ -4,7 +4,7 @@ export const MovieDescriptionPoster = ({ posterPath }) => {
 
     return (
         <div className="film-poster">
-            <img src={posterPath} />
+            <img src={ posterPath } />
         </div>  
     );
 }

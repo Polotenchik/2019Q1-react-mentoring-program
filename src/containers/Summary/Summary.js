@@ -1,33 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import { connect } from "react-redux";
-import { changeItem } from '../../actions';
-import { Label, Button } from '../../common';
-import { FilmSort } from './film-sort';
-
-const Summary = (props) => {
-    const { movieMode, searchPhrase, movieNumber, movieModeGenre, searchType, sortBy, onChangeItem } = props;
-
-    return (
-        <div className='summary'>
-            <div className='summary-wrapper'>
-                { movieMode && <Label content={'Films by ' + movieModeGenre + ' genre'} /> }
-                { !movieMode && <Label content={'Found ' + movieNumber +' movies for ' + searchPhrase + ' by ' + searchType } /> }
-                <FilmSort sortParameters={ sortBy } onParameterClick={ onChangeItem }/>
-            </div>
-        </div>
-    );
-}
-
-Summary.defaultProps = {
-    movieMode: false,
-    searchPhrase: '',
-    movieNumber: 0,
-    movieModeGenre: '',
-    searchType: 'title',
-    onChangeItem: f => f
-};
-
+import { SummaryView } from './SummaryView';
+import { changeItem } from '../../redux/mode/mode.actions';
 
 const mapStateToProps = store => ({
     movieMode: store.mode.movie,
@@ -44,4 +17,4 @@ const mapDispatchToProps = dispatch => ({
     }
 });
   
-export default connect(mapStateToProps, mapDispatchToProps)(Summary);
+export default connect(mapStateToProps, mapDispatchToProps)(SummaryView);

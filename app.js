@@ -12,14 +12,16 @@ if (env === 'development') {
     const webpack = require('webpack');
     const webpackDevMiddleware = require('webpack-dev-middleware');
     const webpackHotMiddleware = require('webpack-hot-middleware');
-    const webpackHotServerMiddleware = require('webpack-hot-server-middleware');
-    const webpackConfig = require('./webpack.server.config');
+   // const webpackHotServerMiddleware = require('webpack-hot-server-middleware');
+    const webpackConfig = require('./webpack.my.config');
 
     const compiler = webpack(webpackConfig);
   
     app.use(webpackDevMiddleware(compiler));
-    app.use(webpackHotMiddleware(compiler.compilers.find(c => c.name === 'client')));
-    app.use(webpackHotServerMiddleware(compiler));
+    app.use(webpackHotMiddleware(compiler));
+
+    //app.use(webpackHotMiddleware(compiler.compilers.find(c => c.name === 'client')));
+   //app.use(webpackHotServerMiddleware(compiler));
 } else {
     app.use(serverRenderer());
 

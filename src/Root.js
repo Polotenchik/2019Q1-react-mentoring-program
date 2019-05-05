@@ -5,7 +5,7 @@ import { hot } from 'react-hot-loader';
 
 const Root = () => (
     <div>
-        Server side rendering
+        Server side rendering ii
     </div>
 )
 

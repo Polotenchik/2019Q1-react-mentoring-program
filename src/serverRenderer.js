@@ -14,10 +14,6 @@ function renderHTML() {
     `;
 }
 
-function serverRenderer() {
-    return (req, res) => {
-        res.send(renderHTML());
-    }; 
-}
-
-module.exports = serverRenderer;
+module.exports = (req, res) => {
+    res.send(renderHTML());
+}; 

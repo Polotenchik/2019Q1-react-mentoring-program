@@ -9,31 +9,22 @@ module.exports = {
   output: {
     filename: 'js/[name].js',
     path: path.resolve('./public'),
-    publicPath: '/'
   },
 
   resolve: {
     extensions: ['.js', '.jsx'],
+    alias: {
+      'react-dom': '@hot-loader/react-dom',
+    },
   },
 
   module: {
     rules: [
       {
-        test: /\.(js|jsx)?$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         use: 'babel-loader',
       },
-      { 
-        test: /\.scss$/,
-        loader: ['style-loader', 'css-loader', 'sass-loader']
-      },
-      {
-        test: /\.(ttf|eot|svg|woff|png|jpg)$/,
-        loader: "file-loader",
-        options: {
-          name: "[path][name].[ext]?[hash]"
-        }
-      }
     ],
   },
 

@@ -25,6 +25,13 @@ module.exports = {
         exclude: /node_modules/,
         use: 'babel-loader',
       },
+      {
+        test: /\.(ttf|eot|svg|woff|png|jpg)$/,
+        loader: "file-loader",
+        options: {
+          name: "[path][name].[ext]?[hash]"
+        }
+      }
     ],
   },
 

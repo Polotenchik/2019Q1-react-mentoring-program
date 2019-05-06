@@ -1,10 +1,10 @@
 import { createStore, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
-import { composeWithDevTools } from 'redux-devtools-extension';
+import thunkMiddleware from 'redux-thunk';
 import reducers from '../reducers';
 import state from '../initialState.json';
 import { START_SEARCH, OPEN_MOVIE } from './store.constants';
 import { resultsToStore, recommendedToStore } from './store.actions';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
 //TODO: move to helpers
 const searchKeysAliases = {
@@ -29,6 +29,7 @@ const RequestToServer = (phrase, searchBy, limit=20) =>
     request.onerror = (err) => rejects(err);
     request.send();
 });
+
 
 const logger = store => next => action => {
     if (action.type === START_SEARCH) {
@@ -59,18 +60,31 @@ const logger = store => next => action => {
     return next(action);
 }
 
-const store = createStore(
-    reducers,
-    (localStorage['redux-store']) ? JSON.parse(localStorage['redux-store']) : state,
-    composeWithDevTools(
-        applyMiddleware(logger)
-    )
-);
+export default (initialState=state) => {
+    const store = createStore(
+        reducers, 
+        initialState, 
+        composeWithDevTools(applyMiddleware(logger))
+    );
 
-store.subscribe(() => {
-    localStorage['redux-store'] = JSON.stringify(store.getState())
-});
+    return store;
+};
+
+
+
+
+// const store = createStore(
+//     reducers,
+//     (window['redux-store']) ? JSON.parse(window['redux-store']) : state,
+//     composeWithDevTools(
+//         applyMiddleware(logger))
+    
+// );
+
+// store.subscribe(() => {
+//     window['redux-store'] = JSON.stringify(store.getState())
+// });
   
-localStorage['redux-store'] = JSON.stringify(store.getState());
+// window['redux-store'] = JSON.stringify(store.getState());
 
-export default store;
+// export default store;

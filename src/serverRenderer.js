@@ -1,5 +1,6 @@
 import React from 'react';
 import { renderToString } from 'react-dom/server';
+import { StaticRouter } from 'react-router-dom';
 import Root from './Root';
 import { Body } from './containers';
 
@@ -21,7 +22,16 @@ function renderHTML(html) {
 
 export default function serverRenderer(req, res) {
     return (req, res) => {
-      const htmlString = renderToString(<Body />);
+      const context = {};
+
+      const root = (
+        <Root 
+          context={ context }
+          location={ req.url }
+          Router={ StaticRouter }
+        /> 
+      )
+      const htmlString = renderToString(root);
 
       res.send(renderHTML(htmlString));
     }

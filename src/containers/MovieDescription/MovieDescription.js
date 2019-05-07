@@ -1,22 +1,13 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { MovieDescriptionInfo } from './MovieDescriptionInfo';
-import { MovieDescriptionPoster } from './MovieDescriptionPoster'
+import { connect } from 'react-redux';
+import { MovieDescriptionView } from './MovieDescriptionView';
 
-export const MovieDescription = ({ active, info }) => {
-    if (active && info) {
-       return ( 
-            <div className="movie-description">
-                <MovieDescriptionPoster posterPath={ info['poster_path'] } />
-                <MovieDescriptionInfo info={ info } />
-            </div>
-        ); 
-    } else {
-        return null;
-    }
-};
+const mapStateToProps = store => ({
+    movieMode: store.mode.movie,
+    currentMovie: store.movies.currentMovie,
+});
 
-MovieDescription.defaulProps = {
-    active: false,
-    info: { }
-};
+const mapDispatchToProps = dispatch => ({
+
+});
+  
+export default connect(mapStateToProps, mapDispatchToProps)(MovieDescriptionView);

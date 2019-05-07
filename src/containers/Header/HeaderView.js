@@ -2,19 +2,31 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { TopBarSection } from '../../components';
 import Search from '../Search/Search';
-import { MovieDescription } from '../index';
+import MovieDescription from '../MovieDescription/MovieDescription';
 
-export const HeaderView = ({ movieMode, currentMovie, onOpenSearch }) => {
+export class HeaderView extends React.Component {
+    constructor(props) {
+        super(props);
+    }
 
-    return (
-        <header className='header' style={{ "background": "#000 url('img/netflix-bg.jpg')" }}>
-            <div className='header-container'>
-                <TopBarSection  searchButtonClick={ onOpenSearch }  movieMode={ movieMode } />
-                <Search />
-                <MovieDescription info={ currentMovie } active={ movieMode } />
-            </div>
-        </header>
-    );
+    componentWillMount() {
+        if (!!this.props.match.params.id) {
+            this.props.onFetchMovieById(this.props.match.params.id);
+        }
+    }
+    
+    render() {
+        return (
+            <header className='header' style={{ "background": "#000 url('img/netflix-bg.jpg')" }}>
+                <div className='header-container'>
+                    <TopBarSection  searchButtonClick={ this.props.onOpenSearch }  movieMode={ this.props.movieMode }/>
+                    <Search />
+                    <MovieDescription />
+                </div>
+            </header>
+        ); 
+    }
+
 };
 
 HeaderView.defaultProps = {

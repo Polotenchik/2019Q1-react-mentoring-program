@@ -1,4 +1,4 @@
-import { OPEN_MOVIE } from './movies.constants';
+import { OPEN_MOVIE, FETCH_MOVIE_BY_ID } from './movies.constants';
 
 export const openMovie = movie => (
   {
@@ -8,6 +8,16 @@ export const openMovie = movie => (
       movieGenre: movie['genres'][0],
       loadingData: true,
       searchType: 'genres'
+    }
+  }
+);
+
+export const fetchMovieById = id => (
+  {
+    type: FETCH_MOVIE_BY_ID,
+    payload: {
+      movieToFetch: id,
+      loadingData: true,
     }
   }
 );

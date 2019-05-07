@@ -2,8 +2,8 @@ import { createStore, applyMiddleware } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 import reducers from '../reducers';
 import state from '../initialState.json';
-import { START_SEARCH, OPEN_MOVIE } from './store.constants';
-import { resultsToStore, recommendedToStore } from './store.actions';
+import { START_SEARCH, OPEN_MOVIE, FETCH_MOVIE_BY_ID } from './store.constants';
+import { resultsToStore, recommendedToStore, fetchMovie } from './store.actions';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
 //TODO: move to helpers
@@ -30,6 +30,18 @@ const RequestToServer = (phrase, searchBy, limit=20) =>
     request.send();
 });
 
+const FetchMovieById = (id) => 
+  new Promise((resolves, rejects) => {
+    const api = `http://react-cdp-api.herokuapp.com/movies/${id}`;
+    const request = new XMLHttpRequest();
+    request.open('GET', api);
+    request.onload = () =>
+      (request.status === 200) ?
+        resolves(JSON.parse(request.response)) :
+        reject(Error(request.statusText));
+    request.onerror = (err) => rejects(err);
+    request.send();
+});
 
 const logger = store => next => action => {
     if (action.type === START_SEARCH) {
@@ -57,6 +69,15 @@ const logger = store => next => action => {
         );
     }
 
+    if (action.type === FETCH_MOVIE_BY_ID) {
+        const id = action.payload.movieToFetch;
+        FetchMovieById(id).then(
+          info => store.dispatch(fetchMovie(info)),
+          err => console.error(
+            new Error("Cannot load film"))
+        );
+    }
+
     return next(action);
 }
 
@@ -69,22 +90,3 @@ export default (initialState=state) => {
 
     return store;
 };
-
-
-
-
-// const store = createStore(
-//     reducers,
-//     (window['redux-store']) ? JSON.parse(window['redux-store']) : state,
-//     composeWithDevTools(
-//         applyMiddleware(logger))
-    
-// );
-
-// store.subscribe(() => {
-//     window['redux-store'] = JSON.stringify(store.getState())
-// });
-  
-// window['redux-store'] = JSON.stringify(store.getState());
-
-// export default store;

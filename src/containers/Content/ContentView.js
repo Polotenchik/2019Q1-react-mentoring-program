@@ -68,6 +68,9 @@ export default class ContentView extends React.Component {
                 </>
             );
         } else {
+            if (!!this.props.match.params.id) {
+                return null;
+            }
             return (<NoResultsBlock />);
         }
 

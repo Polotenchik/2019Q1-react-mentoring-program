@@ -4,10 +4,20 @@ import { hot } from 'react-hot-loader';
 import { Route, Link, Switch, Redirect } from 'react-router-dom';
 import { Provider } from 'react-redux'; 
 import ErrorBoundaryContainer from './containers/ErorrBoundary/ErrorBoundaryContainer';
-import { Body } from './containers';
 import Header from './containers/Header/Header';
-import Content from './containers/Content/Content';
 import { Whooops404, Footer, NoResultsBlock } from './components';
+import Loadable from 'react-loadable';
+
+const Placeholder = () => {
+    return (
+        <div>Placeholder</div>
+    );
+}
+
+const Content = Loadable({
+    loader: () => import('./containers/Content/Content'),
+    loading: Placeholder,
+});
 
 const Root = ({ Router, location, context, store }) => (
     <Provider store={ store }>
@@ -39,8 +49,3 @@ const Root = ({ Router, location, context, store }) => (
 );
 
 export default hot(module)(Root);
-
-{/* <Route exact path="/" component={ Body }/>
-<Route exact path="/search" component={ Body }/>
-<Route exact path="/film/:id"  component={ Body }/>
-*/}

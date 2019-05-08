@@ -3,7 +3,7 @@ import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom';
 import configureStore from './redux/store/configureStore';
 import Root from './Root';
-import { Body } from './containers';
+import Loadable from "react-loadable";
 
 function renderHTML(html, preloadedState) {
     return `
@@ -31,14 +31,17 @@ export default function serverRenderer(req, res) {
     return (req, res) => {
       const store = configureStore();
       const context = {};
+      const modules = [];
 
       const root = (
-        <Root 
-          context={ context }
-          location={ req.url }
-          store={ store }
-          Router={ StaticRouter }
-        /> 
+        <Loadable.Capture report={m => modules.push(m)}>
+          <Root 
+            context={ context }
+            location={ req.url }
+            store={ store }
+            Router={ StaticRouter }
+          />
+        </Loadable.Capture>  
       )
       const htmlString = renderToString(root);
       const preloadedState = store.getState();

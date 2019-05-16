@@ -16,6 +16,9 @@ export const Input = ({ onStartTyping,  onKeyEnterPressed, placeholder, value })
 
 Input.propTypes = {
     placeholder: PropTypes.string,
+    onStartTyping: PropTypes.func.isRequired,
+    onKeyEnterPressed: PropTypes.func,
+    value: PropTypes.string
 };
   
 Input.defaultProps = {

@@ -24,5 +24,5 @@ ReactDOM.render(
             </ErrorBoundaryContainer>
         </Provider>
     </Router>,
-    document.getElementById('greeting')
+    document.getElementById('root')
 );

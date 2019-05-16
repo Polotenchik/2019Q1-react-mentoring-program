@@ -1,5 +1,5 @@
 import { OPEN_MOVIE, OPEN_SEARCH, START_SEARCH,
-    RESULTS_TO_STORE, RECOMMENDED_TO_STORE } from './mode.constants';
+    RESULTS_TO_STORE, RECOMMENDED_TO_STORE, FETCH_MOVIE_BY_ID } from './mode.constants';
 
 export default (state={}, action) => {
   switch (action.type) {
@@ -9,6 +9,12 @@ export default (state={}, action) => {
       search: false,
       movie: true,
       loadingData: action.payload.loadingData
+    };
+  case FETCH_MOVIE_BY_ID:
+    return {
+      ...state,
+      search: false,
+      movie: true
     };
   case OPEN_SEARCH:
     return {

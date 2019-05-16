@@ -2,9 +2,15 @@
 
 > **npm install**
 
-> **npm run dev** - start ***development*** mode
+> **npm run ssr-build** - create ***ssr*** build
 
-> **npm run build** - create ***production*** build
+> **npm run ssr-prod** - launch production ssr
+
+> **npm run ssr-dev** - launch development ssr
+
+> **npm run dev** - start client ***development*** mode
+
+> **npm run build** - create client ***production*** build
 
 > **npm run test** - run unit-tests
 
@@ -12,4 +18,4 @@
 
 > **npm run e2e** - run e2e tests
 
-> **node app.js** - luanch server on  http://localhost:3000/
+> server launch on http://localhost:3030/

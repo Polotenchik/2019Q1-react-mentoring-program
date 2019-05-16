@@ -56,9 +56,9 @@ export default class ContentView extends React.Component {
                     <Summary />
                     <div className='results'>
                         { this.movieList.map((item) => (
-                            <Link to={`/film/${item['id']}`}> 
+                            <Link to={`/film/${item['id']}`}  key={ item['id'].toString() }> 
                                 <MovieItem 
-                                    key={ item['id'] }
+                                    key={ item['id'].toString() }
                                     info={ item }
                                     onPosterClick={ this.chooseMovieByClick }
                                 />
@@ -68,6 +68,9 @@ export default class ContentView extends React.Component {
                 </>
             );
         } else {
+            if (!!this.props.match.params.id) {
+                return null;
+            }
             return (<NoResultsBlock />);
         }
 

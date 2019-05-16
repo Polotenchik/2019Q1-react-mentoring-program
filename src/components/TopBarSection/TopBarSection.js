@@ -8,7 +8,7 @@ export const TopBarSection = ({ movieMode, searchButtonClick }) => {
     return  (
         <div className={'topbar'}>
             <Logo/>
-            {  movieMode && <Link to="/search"><Button content='search' btnWhite btnClick={ searchButtonClick }/></Link> }
+            {  movieMode && <Link to={`/search/`}><Button content='search' btnWhite btnClick={ searchButtonClick }/></Link> }
         </div>
     );
 };

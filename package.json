@@ -9,13 +9,18 @@
     "test": "jest",
     "coverage": "jest --coverage",
     "e2e": "./node_modules/.bin/cypress open",
-    "lint": "eslint ./ --cache --ignore-pattern .gitignore --fix"
+    "lint": "eslint ./ --cache --ignore-pattern .gitignore --fix",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "devDependencies": {
     "@babel/core": "7.0.0",
     "@babel/preset-env": "7.0.0",
     "@babel/preset-flow": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
+    "@storybook/addon-actions": "^5.0.11",
+    "@storybook/addon-info": "^5.0.11",
+    "@storybook/addon-knobs": "^5.0.11",
     "autoprefixer": "9.1.5",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
@@ -57,23 +62,27 @@
     "url-loader": "1.1.2",
     "webpack": "4.17.2",
     "webpack-cli": "3.1.0",
-    "webpack-dev-server": "3.1.8"
+    "webpack-dev-server": "3.1.8",
+    "@storybook/react": "^5.0.11",
+    "@storybook/addon-links": "^5.0.11",
+    "@storybook/addons": "^5.0.11"
   },
   "dependencies": {
-    "express": "^4.16.4",
+    "@storybook/cli": "^5.0.11",
+    "classnames": "^2.2.6",
     "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.11.2",
+    "express": "^4.16.4",
+    "prop-types": "^15.7.2",
     "react": "^16.8.4",
-    "redux": "^4.0.1",
+    "react-dom": "^16.8.4",
     "react-redux": "^6.0.1",
-    "react-router-redux": "^4.0.8",
-    "redux-devtools": "^3.5.0",
-    "redux-thunk": "^2.3.0",
-    "redux-devtools-extension": "^2.13.8",
     "react-router": "^5.0.0",
     "react-router-dom": "^5.0.0",
-    "react-dom": "^16.8.4",
-    "classnames": "^2.2.6",
-    "prop-types": "^15.7.2",
-    "enzyme-adapter-react-16": "^1.11.2"
+    "react-router-redux": "^4.0.8",
+    "redux": "^4.0.1",
+    "redux-devtools": "^3.5.0",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-thunk": "^2.3.0"
   }
 }

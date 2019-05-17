@@ -1,31 +1,26 @@
+// @flow
 import React from 'react';
 import classNames from 'classnames';
-import PropTypes from 'prop-types';
 
-const Caption = (props) => {
+type CaptionProps = {
+  txtWhite: boolean;
+  txtItalic: boolean;
+  content: string;
+}
+
+const Caption = (props: CaptionProps) => {
   const { txtWhite, txtItalic, content } = props;
+
   const itemClass = classNames({
     txt: true,
     'txt-white': txtWhite,
     'txt-italic': txtItalic,
   });
   return (
-    <p className={itemClass}>
+    <p classNames={ itemClass }>
       {content}
     </p>
   );
-};
-
-Caption.propTypes = {
-  txtWhite: PropTypes.bool,
-  txtItalic: PropTypes.bool,
-  content: PropTypes.string,
-};
-
-Caption.defaultProps = {
-  txtWhite: false,
-  txtItalic: false,
-  content: 'Caption',
 };
 
 export default Caption;

@@ -1,29 +1,28 @@
+// @flow
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Input = ({
-  onStartTyping, onKeyEnterPressed, placeholder, value,
-}) => (
-    <input
-        className={ 'search-input' }
-        type='text'
-        placeholder={ placeholder }
-        onInput = { onStartTyping }
-        onKeyPress={ onKeyEnterPressed }
-        value = { value }
-    />
-);
+type InputProps = {
+  placeholder: string,
+  onStartTyping: Function,
+  onKeyEnterPressed: Function,
+  value: string,
+}
 
-Input.propTypes = {
-  placeholder: PropTypes.string,
-  onStartTyping: PropTypes.func.isRequired,
-  onKeyEnterPressed: PropTypes.func,
-  value: PropTypes.string,
-};
+const Input = (props: InputProps) => {
+  const {
+    onStartTyping, onKeyEnterPressed, placeholder = 'Start typing...', value = '',
+  } = props;
 
-Input.defaultProps = {
-  placeholder: 'Start typing...',
-  value: '',
+  return (
+      <input
+          className={ 'search-input' }
+          type='text'
+          placeholder={ placeholder }
+          onInput = { onStartTyping }
+          onKeyPress={ onKeyEnterPressed }
+          value = { value }
+      />
+  );
 };
 
 export default Input;

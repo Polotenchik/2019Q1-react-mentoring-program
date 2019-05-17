@@ -1,6 +1,6 @@
 import React from 'react';
-import { Footer } from './Footer';
 import { shallow } from 'enzyme';
+import { Footer } from './Footer';
 
 describe('<Footer />', () => {
   describe('<Footer />', () => {

@@ -1,6 +1,6 @@
 import React from 'react';
-import { Label } from './Label';
 import { shallow } from 'enzyme';
+import { Label } from './Label';
 
 const mockContent = 'foo bar';
 

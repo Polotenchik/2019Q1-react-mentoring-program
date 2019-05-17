@@ -1,6 +1,6 @@
 import React from 'react';
-import { Caption } from './Сaption';
 import { shallow } from 'enzyme';
+import { Caption } from './Сaption';
 
 const mockText = 'Text for test';
 

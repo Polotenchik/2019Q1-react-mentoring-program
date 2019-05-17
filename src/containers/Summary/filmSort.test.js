@@ -1,11 +1,11 @@
 import React from 'react';
+import { shallow } from 'enzyme';
 import { FilmSort } from './film-sort';
-import {shallow} from 'enzyme';
 
 const mockFunc = jest.fn();
 const mockSortParameters = {
   parameters: ['release date', 'rating', 'my rating'],
-  chosenParameter: 'release date'
+  chosenParameter: 'release date',
 };
 
 describe('<FilmSort />', () => {

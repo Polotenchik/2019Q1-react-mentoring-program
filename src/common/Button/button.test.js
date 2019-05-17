@@ -1,6 +1,6 @@
 import React from 'react';
-import { Button } from './Button';
 import { shallow } from 'enzyme';
+import { Button } from './Button';
 
 describe('<Button />', () => {
   describe('Rendering', () => {

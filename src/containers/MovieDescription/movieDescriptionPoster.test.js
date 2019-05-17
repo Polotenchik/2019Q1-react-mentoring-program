@@ -1,6 +1,6 @@
 import React from 'react';
-import { MovieDescriptionPoster } from './MovieDescriptionPoster';
 import { shallow } from 'enzyme';
+import { MovieDescriptionPoster } from './MovieDescriptionPoster';
 
 const mockPath = 'https://image.tmdb.org/t/p/w500/pU1ULUq8D3iRxl1fdX2lZIzdHuI.jpg';
 

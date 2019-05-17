@@ -1,6 +1,6 @@
 import React from 'react';
-import { Title } from './Title';
 import { shallow } from 'enzyme';
+import { Title } from './Title';
 
 describe('<Title />', () => {
   describe('Rendering', () => {
@@ -15,13 +15,13 @@ describe('<Title />', () => {
       expect(shallow(<Title ttlWhite />).is('.title-white')).toBe(true);
     });
     it('can be set as uppercase title', () => {
-        expect(shallow(<Title ttlUC />).is('.title-uppercase')).toBe(true);
-      });
+      expect(shallow(<Title ttlUC />).is('.title-uppercase')).toBe(true);
+    });
     it('can be set as red title', () => {
       expect(shallow(<Title ttlRed />).is('.title-red')).toBe(true);
     });
     it('can be set as big title', () => {
-        expect(shallow(<Title ttlBig />).is('.title-big')).toBe(true);
-      });
+      expect(shallow(<Title ttlBig />).is('.title-big')).toBe(true);
+    });
   });
 });

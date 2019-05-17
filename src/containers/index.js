@@ -1,3 +1,9 @@
-export { Body } from './Body/Body';
-export { MovieDescription } from './MovieDescription/MovieDescription';
-export { MovieItem } from './MovieItem/MovieItem';
+import Body from './Body/Body';
+import MovieDescription from './MovieDescription/MovieDescription';
+import MovieItem from './MovieItem/MovieItem';
+
+export {
+  Body,
+  MovieDescription,
+  MovieItem,
+};

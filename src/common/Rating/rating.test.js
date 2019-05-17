@@ -1,6 +1,6 @@
 import React from 'react';
-import { Rating } from './Rating';
 import { shallow } from 'enzyme';
+import { Rating } from './Rating';
 
 const mockNumber = '42';
 

@@ -1,6 +1,6 @@
 import React from 'react';
-import { NoResultsBlock } from './NoResultsBlock';
 import { shallow } from 'enzyme';
+import { NoResultsBlock } from './NoResultsBlock';
 
 describe('<NoResultsBlock />', () => {
   describe('<NoResultsBlock />', () => {

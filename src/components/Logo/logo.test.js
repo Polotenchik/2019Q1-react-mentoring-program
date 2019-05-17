@@ -1,6 +1,6 @@
 import React from 'react';
-import { Logo } from './Logo.js';
 import { shallow } from 'enzyme';
+import { Logo } from './Logo.js';
 
 describe('<Logo />', () => {
   it('should render the component', () => {

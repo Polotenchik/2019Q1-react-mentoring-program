@@ -1,11 +1,9 @@
 import React from 'react';
 
-export const MovieDescriptionPoster = ({ posterPath }) => {
+const MovieDescriptionPoster = ({ posterPath }) => (
+    <div className="film-poster">
+        <img src={ posterPath } />
+    </div>
+);
 
-    return (
-        <div className="film-poster">
-            <img src={ posterPath } />
-        </div>  
-    );
-}
-    
+export default MovieDescriptionPoster;

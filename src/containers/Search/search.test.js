@@ -1,46 +1,47 @@
 import React from 'react';
-import store from "../../store";
 import { Provider } from 'react-redux';
 import { shallow } from 'enzyme';
+import store from '../../store';
 import Search from './Search';
 
 const mockFunc = jest.fn();
 const mockSearchPhraseText = 'star wars';
 const mockEl = {
-    target: {
-        innerHTML: 'genres', 
-        value: 'some input'
-    }, 
-    key: 'Enter'
+  target: {
+    innerHTML: 'genres',
+    value: 'some input',
+  },
+  key: 'Enter',
 };
 const mockNewType = 'genres';
 
 describe('<Search />', () => {
-   describe('Rendering', () => {
-
+  describe('Rendering', () => {
     it('should render the component in the search mode', () => {
-        const wrapper = shallow(
+      const wrapper = shallow(
             <Provider store={ store }>
                 <Search onSearch={ mockFunc } searchMode/>
-            </Provider>);
-        expect(wrapper).toMatchSnapshot();
+            </Provider>,
+      );
+      expect(wrapper).toMatchSnapshot();
     });
 
     it('should render the component with default props', () => {
-        const wrapper = shallow(
+      const wrapper = shallow(
             <Provider store={ store }>
                 <Search onSearch={ mockFunc } searchMode/>
-            </Provider>);
-        expect(wrapper).toMatchSnapshot();
+            </Provider>,
+      );
+      expect(wrapper).toMatchSnapshot();
     });
 
     it('should not render the component with disabled searchMode', () => {
-        expect(shallow(
+      expect(shallow(
             <Provider store={ store }>
                 <Search onSearch={ mockFunc }/>
-            </Provider>).is('.header-search')).toBe(false);
+            </Provider>,
+      ).is('.header-search')).toBe(false);
     });
-
   });
 //   describe('Methods', () => {
 //     let instance;

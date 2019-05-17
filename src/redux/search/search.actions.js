@@ -1,12 +1,13 @@
-import { START_SEARCH } from './search.constants';
+import START_SEARCH from './search.constants';
 
-export const startSearch = (phrase, type) => (
-  { 
-    type: START_SEARCH,
-    payload: {
-      searchPhrase: phrase,
-      searchType: type,
-      replaceCurrentResultsBy: [],
-      loadingData: true
-    }
+const startSearch = (phrase, type) => ({
+  type: START_SEARCH,
+  payload: {
+    searchPhrase: phrase,
+    searchType: type,
+    replaceCurrentResultsBy: [],
+    loadingData: true,
+  },
 });
+
+export default startSearch;

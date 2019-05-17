@@ -1,1 +1,3 @@
-export const START_SEARCH = 'START_SEARCH';
+const START_SEARCH = 'START_SEARCH';
+
+export default START_SEARCH;

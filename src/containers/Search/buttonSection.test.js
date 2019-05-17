@@ -1,6 +1,6 @@
 import React from 'react';
-import { ButtonSection } from './ButtonSection';
 import { shallow } from 'enzyme';
+import { ButtonSection } from './ButtonSection';
 
 const mockFunc = jest.fn();
 

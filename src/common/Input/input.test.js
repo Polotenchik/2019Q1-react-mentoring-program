@@ -1,6 +1,6 @@
 import React from 'react';
-import { Input } from './Input';
 import { shallow } from 'enzyme';
+import { Input } from './Input';
 
 const mockText = 'foo bar quux';
 

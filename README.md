@@ -4,7 +4,7 @@
 
 > **npm run dev** - start ***development*** mode
 
-> **npm run build** - create ***production*** build
+> **npm run prod** - create ***production*** build
 
 > **npm run test** - run unit-tests
 

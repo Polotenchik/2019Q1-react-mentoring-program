@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import SummaryView from './SummaryView';
 import { changeItem } from '../../redux/mode/mode.actions';
 import {
-  selectMovieMode, selectSearchPhrase, selectMovieNumber, selectMovieGenre, selectSearchType, selectMovieSort
+  selectMovieMode, selectSearchPhrase, selectMovieNumber, selectMovieGenre, selectSearchType, selectMovieSort,
 } from '../../selectors/index';
 
 

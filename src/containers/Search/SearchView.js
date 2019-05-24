@@ -41,7 +41,7 @@ export default class SearchView extends React.Component {
 
     render() {
       const { searchMode } = this.props;
-
+      console.log('render');
       if (searchMode) {
         return (
                 <div className={'header-search'}>

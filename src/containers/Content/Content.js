@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import openMovie from '../../redux/movies/movies.actions';
 import ContentView from './ContentView';
 import {
-  selectSearch, selectSearchList, selectRecommendedList, selectMovieGenre, selectMode, selectMovieSort
+  selectSearch, selectSearchList, selectRecommendedList, selectMovieGenre, selectMode, selectMovieSort,
 } from '../../selectors/index';
 
 const mapStateToProps = store => ({

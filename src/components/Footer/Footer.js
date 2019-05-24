@@ -1,6 +1,6 @@
 import React from 'react';
-import { Logo } from '../index';
 import styled from 'styled-components';
+import { Logo } from '../index';
 
 const ContainerFooter = styled.footer`
     height: 60px;
@@ -8,6 +8,10 @@ const ContainerFooter = styled.footer`
     background: #434343;
     flex: 0 0 auto;
     margin: 0 auto;
+
+    img {
+        margin: 20px auto auto 50px; 
+    }
 `;
 
 const Footer = () => (

@@ -1,0 +1,4 @@
+export const RESULTS_TO_STORE = 'RESULTS_TO_STORE';
+export const RECOMMENDED_TO_STORE = 'RECOMMENDED_TO_STORE';
+export const OPEN_MOVIE = 'OPEN_MOVIE';
+export const START_SEARCH = 'START_SEARCH';

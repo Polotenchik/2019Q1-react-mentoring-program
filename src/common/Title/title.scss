@@ -1,0 +1,22 @@
+.title {
+  font-size: 22px;
+  padding-bottom: $elementPadding;
+  letter-spacing: 1px;
+  color: $color_black;
+}
+
+.title-white {
+  color: $color_white;
+}
+
+.title-uppercase {
+  text-transform: uppercase;
+}
+.title-big {
+  font-size: 28px;
+  font-weight: normal;
+}
+
+.title-red {
+  color: $color_red;
+}

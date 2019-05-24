@@ -1,14 +1,18 @@
 import { connect } from 'react-redux';
 import SummaryView from './SummaryView';
 import { changeItem } from '../../redux/mode/mode.actions';
+import {
+  selectMovieMode, selectSearchPhrase, selectMovieNumber, selectMovieGenre, selectSearchType, selectMovieSort
+} from '../../selectors/index';
+
 
 const mapStateToProps = store => ({
-  movieMode: store.mode.movie,
-  searchPhrase: store.search.phrase,
-  movieNumber: store.movies.searchList.length,
-  movieModeGenre: store.movies.currentMovieGenre,
-  searchType: store.search.type,
-  sortBy: store.movies.sortBy,
+  movieMode: selectMovieMode(store),
+  searchPhrase: selectSearchPhrase(store),
+  movieNumber: selectMovieNumber(store),
+  movieModeGenre: selectMovieGenre(store),
+  searchType: selectSearchType(store),
+  sortBy: selectMovieSort(store),
 });
 
 const mapDispatchToProps = dispatch => ({

@@ -1,14 +1,17 @@
 import { connect } from 'react-redux';
 import openMovie from '../../redux/movies/movies.actions';
 import ContentView from './ContentView';
+import {
+  selectSearch, selectSearchList, selectRecommendedList, selectMovieGenre, selectMode, selectMovieSort
+} from '../../selectors/index';
 
 const mapStateToProps = store => ({
-  searchAttributes: store.search,
-  searchList: store.movies.searchList,
-  recommendedList: store.movies.recommendedList,
-  movieGenre: store.movies.currentMovieGenre,
-  mode: store.mode,
-  sortBy: store.movies.sortBy,
+  searchAttributes: selectSearch(store),
+  searchList: selectSearchList(store),
+  recommendedList: selectRecommendedList(store),
+  movieGenre: selectMovieGenre(store),
+  mode: selectMode(store),
+  sortBy: selectMovieSort(store),
 });
 
 const mapDispatchToProps = dispatch => ({

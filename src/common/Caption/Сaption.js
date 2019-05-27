@@ -2,6 +2,7 @@
 import React from 'react';
 import classNames from 'classnames';
 
+
 type CaptionProps = {
   txtWhite: boolean;
   txtItalic: boolean;

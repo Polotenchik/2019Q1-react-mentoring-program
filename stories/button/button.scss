@@ -1,0 +1,36 @@
+.btn {
+  height: 30px;
+  width: 100px;
+  line-height: 30px;
+  text-align: center;
+  padding: 0 20px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: normal;
+  user-select: none;
+}
+
+.btn-big {
+  font-size: 18px;
+  line-height: 45px;
+  height: 45px;
+  padding: 0 25px;
+  min-width: 235px;
+}
+
+.btn-white {
+  background: #FFF;
+  color: #F55263;
+}
+
+.btn-red {
+  background: #F55263;
+  color:  #FFF;
+}
+
+.btn-grey {
+  background: #3C3C3C;
+  color: #FFF;
+}

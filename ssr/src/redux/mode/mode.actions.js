@@ -3,15 +3,15 @@ import { OPEN_SEARCH, CHANGE_SORTING } from './mode.constants';
 export const openSearch = () => (
   {
     type: OPEN_SEARCH,
-    payload: {}
+    payload: {},
   }
 );
 
-export const changeItem = newCriterion =>(
+export const changeItem = newCriterion => (
   {
     type: CHANGE_SORTING,
     payload: {
-      chosenParameter: newCriterion
-    }
+      chosenParameter: newCriterion,
+    },
   }
 );

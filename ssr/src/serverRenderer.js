@@ -1,12 +1,12 @@
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom';
+import Loadable from 'react-loadable';
 import configureStore from './redux/store/configureStore';
 import Root from './Root';
-import Loadable from "react-loadable";
 
 function renderHTML(html, preloadedState) {
-    return `
+  return `
         <!doctype html>
         <html>
           <head>
@@ -28,24 +28,24 @@ function renderHTML(html, preloadedState) {
 }
 
 export default function serverRenderer(req, res) {
-    return (req, res) => {
-      const store = configureStore();
-      const context = {};
-      const modules = [];
+  return (req, res) => {
+    const store = configureStore();
+    const context = {};
+    const modules = [];
 
-      const root = (
+    const root = (
         <Loadable.Capture report={m => modules.push(m)}>
-          <Root 
+          <Root
             context={ context }
             location={ req.url }
             store={ store }
             Router={ StaticRouter }
           />
-        </Loadable.Capture>  
-      )
-      const htmlString = renderToString(root);
-      const preloadedState = store.getState();
+        </Loadable.Capture>
+    );
+    const htmlString = renderToString(root);
+    const preloadedState = store.getState();
 
-      res.send(renderHTML(htmlString, preloadedState));
-    }
-};  
+    res.send(renderHTML(htmlString, preloadedState));
+  };
+}

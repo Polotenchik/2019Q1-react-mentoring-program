@@ -5,10 +5,10 @@ export const openMovie = movie => (
     type: OPEN_MOVIE,
     payload: {
       movieToOpen: { ...movie },
-      movieGenre: movie['genres'][0],
+      movieGenre: movie.genres[0],
       loadingData: true,
-      searchType: 'genres'
-    }
+      searchType: 'genres',
+    },
   }
 );
 
@@ -18,6 +18,6 @@ export const fetchMovieById = id => (
     payload: {
       movieToFetch: id,
       loadingData: true,
-    }
+    },
   }
 );

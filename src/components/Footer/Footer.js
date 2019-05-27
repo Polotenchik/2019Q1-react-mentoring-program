@@ -20,11 +20,4 @@ const Footer = () => (
      </ContainerFooter>
 );
 
-
-// const Footer = () => (
-//     <footer className={'footer'}>
-//         <Logo />
-//     </footer>
-// );
-
 export default Footer;

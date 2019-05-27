@@ -16,7 +16,7 @@
 //     const webpackConfig = require('./webpack.my.config');
 
 //     const compiler = webpack(webpackConfig);
-  
+
 //     app.use(webpackDevMiddleware(compiler));
 //     app.use(webpackHotMiddleware(compiler));
 

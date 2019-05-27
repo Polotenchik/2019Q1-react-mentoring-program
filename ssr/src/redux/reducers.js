@@ -4,7 +4,7 @@ import movies from './movies/movies.reducer';
 import search from './search/search.reducer';
 
 export default combineReducers({
-    mode,
-    movies,
-    search
+  mode,
+  movies,
+  search,
 });

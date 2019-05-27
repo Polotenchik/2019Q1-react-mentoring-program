@@ -1,13 +1,11 @@
 import React from 'react';
 
-export const MovieItemPoster = ({ posterLink, posterClick }) => {
-    return (
+export const MovieItemPoster = ({ posterLink, posterClick }) => (
         <div className='item-poster'>
-            <img 
-                src={ posterLink } 
-                className='item-poster-img' 
-                onClick={ posterClick } 
+            <img
+                src={ posterLink }
+                className='item-poster-img'
+                onClick={ posterClick }
             />
         </div>
-    );
-};
+);

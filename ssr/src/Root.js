@@ -1,25 +1,27 @@
 import 'babel-polyfill';
 import React from 'react';
 import { hot } from 'react-hot-loader';
-import { Route, Link, Switch, Redirect } from 'react-router-dom';
-import { Provider } from 'react-redux'; 
+import {
+  Route, Link, Switch, Redirect,
+} from 'react-router-dom';
+import { Provider } from 'react-redux';
+import Loadable from 'react-loadable';
 import ErrorBoundaryContainer from './containers/ErorrBoundary/ErrorBoundaryContainer';
 import Header from './containers/Header/Header';
 import { Whooops404, Footer, NoResultsBlock } from './components';
-import Loadable from 'react-loadable';
 
-const Placeholder = () => {
-    return (
+const Placeholder = () => (
         <div>Placeholder</div>
-    );
-}
+);
 
 const Content = Loadable({
-    loader: () => import('./containers/Content/Content'),
-    loading: Placeholder,
+  loader: () => import('./containers/Content/Content'),
+  loading: Placeholder,
 });
 
-const Root = ({ Router, location, context, store }) => (
+const Root = ({
+  Router, location, context, store,
+}) => (
     <Provider store={ store }>
         <Router location={ location } context={ context }>
             <ErrorBoundaryContainer>

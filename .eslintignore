@@ -3,3 +3,4 @@ public/
 webpack.*
 /cypress
 *.test.js
+ssr

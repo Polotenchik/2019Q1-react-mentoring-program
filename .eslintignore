@@ -3,3 +3,7 @@ public/
 webpack.*
 /cypress
 *.test.js
+<<<<<<< HEAD
+=======
+ssr
+>>>>>>> master

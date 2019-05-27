@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MovieItem /> Rendering should render the component 1`] = `
+<div
+  className="item"
+>
+  <MovieItemPoster
+    posterClick={[Function]}
+    posterLink="https://image.tmdb.org/t/p/w500/pU1ULUq8D3iRxl1fdX2lZIzdHuI.jpg"
+  />
+  <MovieItemInfo
+    genre={
+      Array [
+        "Adventure",
+        "Science Fiction",
+        "Action",
+      ]
+    }
+    movieTitle="Ready Player One"
+    releaseDate="2018-03-28"
+  />
+</div>
+`;
+
+exports[`<MovieItem /> Rendering should render the component with default props 1`] = `
+<div
+  className="item"
+>
+  <MovieItemPoster
+    posterClick={[Function]}
+    posterLink="https://image.tmdb.org/t/p/w500/pU1ULUq8D3iRxl1fdX2lZIzdHuI.jpg"
+  />
+  <MovieItemInfo
+    genre={
+      Array [
+        "Adventure",
+        "Science Fiction",
+        "Action",
+      ]
+    }
+    movieTitle="Ready Player One"
+    releaseDate="2018-03-28"
+  />
+</div>
+`;

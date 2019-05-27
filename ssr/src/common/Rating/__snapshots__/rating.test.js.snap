@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Rating /> Rendering should render rating label 1`] = `
+<span
+  className="rating"
+>
+  42
+</span>
+`;
+
+exports[`<Rating /> Rendering should render rating label with mock value 1`] = `
+<span
+  className="rating"
+/>
+`;

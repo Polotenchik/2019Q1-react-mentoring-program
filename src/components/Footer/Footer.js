@@ -20,6 +20,7 @@ const Footer = () => (
      </ContainerFooter>
 );
 
+<<<<<<< HEAD
 
 // const Footer = () => (
 //     <footer className={'footer'}>
@@ -27,4 +28,6 @@ const Footer = () => (
 //     </footer>
 // );
 
+=======
+>>>>>>> master
 export default Footer;

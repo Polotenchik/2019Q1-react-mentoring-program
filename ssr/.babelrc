@@ -1,0 +1,10 @@
+{
+    "presets": ["@babel/env", "@babel/react"],
+    "plugins": [
+        ["transform-object-rest-spread"], 
+        ["transform-class-properties"],
+        "syntax-dynamic-import",
+        "dynamic-import-node",
+        "react-loadable/babel"
+    ]
+}

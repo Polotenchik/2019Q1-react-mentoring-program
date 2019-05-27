@@ -1,0 +1,47 @@
+.movie-description {
+    display: flex;
+    margin: $elementPadding 0;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,0.5);
+}
+
+.movie-description-poster img {
+    width: $filmPosterWidth;
+}
+
+.movie-description-info {
+    width: $filmInfoWidth;
+    padding: 0 $elementPadding 0 0;  
+}
+
+.movie-description-info-header {
+    display: flex;
+    align-items: end;
+    cursor: default;
+}
+
+.caption {
+    font-size: $textSize;
+    line-height: 25px;
+    padding: $elementPadding 0;
+    text-align: justify;
+    color: $color_white;
+    font-style: italic;
+}
+
+.year-min {
+    display: flex;
+}
+  
+.year-min > div {
+    margin: 0 $elementPadding*2 $elementPadding $elementPadding*2
+}
+  
+.year-min > div:first-child {
+    margin: 0 0 $elementPadding 0
+}
+  
+.year-min > div:last-child {
+    margin: 0 0 $elementPadding $elementPadding*2
+}

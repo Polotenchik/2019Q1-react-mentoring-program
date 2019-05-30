@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cockpit Snapshot Cockpit Component should render correctly with given props 1`] = `
+<styled.div>
+  <styled.div>
+    <div>
+      <span
+        id="filmsCount"
+      >
+        10
+      </span>
+      <span>
+         movies found
+      </span>
+    </div>
+    <styled.div>
+      <form>
+        <span>
+          Sort by
+        </span>
+        <RadioButton
+          filtered="release date"
+          handlerChange={[MockFunction]}
+          inputId="release_date"
+          inputName="sort"
+          inputValue="release date"
+          transparent={true}
+        />
+        <RadioButton
+          filtered="release date"
+          handlerChange={[MockFunction]}
+          inputId="vote_average"
+          inputName="sort"
+          inputValue="rating"
+          transparent={true}
+        />
+      </form>
+      <Arrow
+        down={false}
+      />
+    </styled.div>
+  </styled.div>
+</styled.div>
+`;
